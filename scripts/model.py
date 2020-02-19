@@ -519,7 +519,7 @@ class MRIA_IO(object):
         model = self.m
 
         try:
-            data_path = 'D:\\Dropbox\\OIA\\Argentina\\Data' #load_config()['paths']['data']
+            data_path = 'C:\\Dropbox\\OIA\\Argentina\\Data' #load_config()['paths']['data']
             RatMarg = pd.read_csv(os.path.join(data_path, 'input_data',
                                                'Ratmarg_{}.csv'.format(self.name)), index_col=[0], header=0)
 
@@ -727,9 +727,11 @@ class MRIA_IO(object):
 
         def demDisRat(model, R, S):
             return (
-                self.Demand[R, S] == (sum(self.A_matrix[R, S, R, Sb]*self.X[R, Sb] for Sb in model.Sb) + self.lfd[R, S] + self.Rdem[R, S] - self.Rat[R, S]
-                                      + sum(self.ImportShare[R, Rb, S]*(sum(self.A_matrix[R, S, Rb, Sb]*self.X[Rb, Sb] for Sb in model.Sb) +
-                                                                        self.fd[Rb, S] + self.Rdem[Rb, S] - self.Rat[Rb, S]) for Rb in model.Rb if (R != Rb))
+                self.Demand[R, S] == (sum(self.A_matrix[R, S, R, Sb]*self.X[R, Sb] for Sb in model.Sb) 
+                                      + self.lfd[R, S] + self.Rdem[R, S] - self.Rat[R, S]
+                                      + sum(self.ImportShare[R, Rb, S]*(sum(self.A_matrix[R, S, Rb, Sb]*self.X[Rb, Sb] for Sb in model.Sb) 
+                                      + self.fd[Rb, S] + self.Rdem[Rb, S] 
+                                      - self.Rat[Rb, S]) for Rb in model.Rb if (R != Rb))
                                       + sum(self.ImportShare[R, Rb, S]*(self.DisImp[Rb, S])
                                             for Rb in model.Rb if (R != Rb))
                                       + self.ExpROW[R, S])
@@ -743,15 +745,14 @@ class MRIA_IO(object):
         model.demsupDis = Constraint(model.R, model.S, rule=demsupDis, doc='Satisfy demand')
 
         def DisImpA(model, R, S):
-            return (self.DisImp[R, S]*(self.DisImp[R, S] + (self.Xbase[R, S]*self.X_up[R, S]) - self.Demand[R, S])) == 0
+            return (self.DisImp[R, S]*(self.DisImp[R, S] + 0.98*(self.Xbase[R, S]*self.X_up[R, S]) - self.Demand[R, S])) == 0
 
-        model.DisImpA = Constraint(model.R, model.S, rule=DisImpA, doc='Satisfy demand')
+#        model.DisImpA = Constraint(model.R, model.S, rule=DisImpA, doc='Satisfy demand')
 
         def DisImpEq(model, R, S):
-            #    return m.DisImp[R, S] >=  (m.Demand[R, S] - (m.X[R, S]))
             return self.DisImp[R, S] >= (self.Demand[R, S] - (self.X[R, S]*self.X_up[R, S]))
 
-#        model.DisImpEq = Constraint(model.R, model.S, rule=DisImpEq, doc='Satisfy demand')
+        model.DisImpEq = Constraint(model.R, model.S, rule=DisImpEq, doc='Satisfy demand')
 
         def ObjectiveDis2(model):
             return (

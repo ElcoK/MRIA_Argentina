@@ -119,8 +119,8 @@ class io_basic(object):
         # And return the data to the mother class
         self.FD_data = FD_data
         self.T_data = T_data
-        self.VA_data = pd.DataFrame(VA_data['VA'])
-        self.ImpROW_data = pd.DataFrame(VA_data['Import'])
+        self.VA_data = pd.DataFrame(VA_data[('VA',)])
+        self.ImpROW_data = pd.DataFrame(VA_data[('Import',)])
         self.ExpROW_data = ExpROW_data
 
     def prep_data(self):
