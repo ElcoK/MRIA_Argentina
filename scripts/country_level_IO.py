@@ -278,7 +278,6 @@ def EORA(save_output=True):
 
   # Inverse for industry-to-industry
   A_ii = np.dot(D,B)
-  F_ii = np.dot(D,F)
   IDB_inv = np.linalg.inv((I_i-np.dot(D,B))) # (I-DB)^-1 
 
   # And canclulate sum of industries
@@ -314,9 +313,9 @@ def EORA(save_output=True):
   X0 = EORA.values[:,:]
 
   # get sum of T
-  u = np.array(list(EORA.sum(axis=1)[:16])+[EORA.loc['ValueA'].sum(),
-                  EORA.loc['Imports'].sum()])
-  v = np.array(list(EORA.sum(axis=1)[:16])+[EORA['FinalD'].sum(),EORA['Exports'].sum()])
+  # u = np.array(list(EORA.sum(axis=1)[:16])+[EORA.loc['ValueA'].sum(),
+  #                 EORA.loc['Imports'].sum()])
+  # v = np.array(list(EORA.sum(axis=1)[:16])+[EORA['FinalD'].sum(),EORA['Exports'].sum()])
 
   # and only keep T
 
