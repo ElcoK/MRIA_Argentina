@@ -1,0 +1,236 @@
+basetable:
+  index: indices.csv
+  file: basetable.csv
+  type: csv
+  threshold: 0
+disaggregation:
+  - id: ARG
+    type: region
+    into: [Ciudad_de_Buenos_Aires, Buenos_Aires, Catamarca, Cordoba, Corrientes, Chaco, Chubut, Entre_Rios, Formosa, Jujuy, La_Pampa, La_Rioja, Mendoza, Misiones, Neuquen, Rio_Negro, Salta, San_Juan, San_Luis, Santa_Cruz, Santa_Fe, Santiago_del_Estero, Tucuman, Tierra_del_Fuego]
+    proxies:
+      - level: 2
+        year: 2016
+        file: proxy_reg_arg.csv
+  - id: A
+    type: sector
+    into: [secA]
+    proxies:
+      - level: 18
+        year: 2016
+        file: proxy_trade_secA.csv    
+      - level: 14
+        year: 2016
+        file: proxy_trade14_secA.csv
+      - level: 4
+        year: 2016
+        file: proxy_secA.csv
+  - id: B
+    type: sector
+    into: [secB]
+    proxies:
+      - level: 18
+        year: 2016
+        file: proxy_trade_secB.csv
+      - level: 14
+        year: 2016
+        file: proxy_trade14_secB.csv
+      - level: 4
+        year: 2016
+        file: proxy_secB.csv
+  - id: C
+    type: sector
+    into: [secC]
+    proxies:
+      - level: 18
+        year: 2016
+        file: proxy_trade_secC.csv
+      - level: 14
+        year: 2016
+        file: proxy_trade14_secC.csv
+      - level: 4
+        year: 2016
+        file: proxy_secC.csv
+  - id: D
+    type: sector
+    into: [secD]
+    proxies:
+      - level: 18
+        year: 2016
+        file: proxy_trade_secD.csv
+      - level: 14
+        year: 2016
+        file: proxy_trade14_secD.csv
+      - level: 4
+        year: 2016
+        file: proxy_secD.csv
+  - id: E
+    type: sector
+    into: [secE]
+    proxies:
+      - level: 18
+        year: 2016
+        file: proxy_trade_secE.csv
+      - level: 14
+        year: 2016
+        file: proxy_trade14_secE.csv
+      - level: 4
+        year: 2016
+        file: proxy_secE.csv
+  - id: F
+    type: sector
+    into: [secF]
+    proxies:
+      - level: 18
+        year: 2016
+        file: proxy_trade_secF.csv
+      - level: 14
+        year: 2016
+        file: proxy_trade14_secF.csv
+      - level: 4
+        year: 2016
+        file: proxy_secF.csv
+  - id: G
+    type: sector
+    into: [secG]
+    proxies:
+      - level: 18
+        year: 2016
+        file: proxy_trade_secG.csv
+      - level: 14
+        year: 2016
+        file: proxy_trade14_secG.csv
+      - level: 4
+        year: 2016
+        file: proxy_secG.csv
+  - id: H
+    type: sector
+    into: [secH]
+    proxies:
+      - level: 18
+        year: 2016
+        file: proxy_trade_secH.csv
+      - level: 14
+        year: 2016
+        file: proxy_trade14_secH.csv
+      - level: 4
+        year: 2016
+        file: proxy_secH.csv
+  - id: I
+    type: sector
+    into: [secI]
+    proxies:
+      - level: 18
+        year: 2016
+        file: proxy_trade_secI.csv
+      - level: 14
+        year: 2016
+        file: proxy_trade14_secI.csv
+      - level: 4
+        year: 2016
+        file: proxy_secI.csv        
+  - id: J
+    type: sector
+    into: [secJ]
+    proxies:
+      - level: 18
+        year: 2016
+        file: proxy_trade_secJ.csv
+      - level: 14
+        year: 2016
+        file: proxy_trade14_secJ.csv
+      - level: 4
+        year: 2016
+        file: proxy_secJ.csv        
+  - id: K
+    type: sector
+    into: [secK]
+    proxies:
+      - level: 18
+        year: 2016
+        file: proxy_trade_secK.csv
+      - level: 14
+        year: 2016
+        file: proxy_trade14_secK.csv
+      - level: 4
+        year: 2016
+        file: proxy_secK.csv        
+  - id: L
+    type: sector
+    into: [secL]
+    proxies:
+      - level: 18
+        year: 2016
+        file: proxy_trade_secL.csv
+      - level: 14
+        year: 2016
+        file: proxy_trade14_secL.csv
+      - level: 4
+        year: 2016
+        file: proxy_secL.csv        
+  - id: M
+    type: sector
+    into: [secM]
+    proxies:
+      - level: 18
+        year: 2016
+        file: proxy_trade_secM.csv
+      - level: 14
+        year: 2016
+        file: proxy_trade14_secM.csv
+      - level: 4
+        year: 2016
+        file: proxy_secM.csv        
+  - id: N
+    type: sector
+    into: [secN]
+    proxies:
+      - level: 14
+        year: 2016
+        file: proxy_trade14_secN.csv
+      - level: 4
+        year: 2016
+        file: proxy_secN.csv        
+  - id: O
+    type: sector
+    into: [secO]
+    proxies:
+      - level: 18
+        year: 2016
+        file: proxy_trade_secO.csv
+      - level: 14
+        year: 2016
+        file: proxy_trade14_secO.csv
+      - level: 4
+        year: 2016
+        file: proxy_secO.csv  
+  - id: P
+    type: sector
+    into: [secP]
+    proxies:
+      - level: 18
+        year: 2016
+        file: proxy_trade_secP.csv
+      - level: 14
+        year: 2016
+        file: proxy_trade14_secP.csv
+      - level: 4
+        year: 2016
+        file: proxy_secP.csv 
+  - id: other1
+    type: sector
+    into: [other11]
+    proxies:
+      - level: 18
+        year: 2016
+        file: proxy_trade_other1.csv
+  - id: other2
+    type: sector
+    into: [other21]
+    proxies:
+      - level: 18
+        year: 2016
+        file: proxy_trade_other2.csv
+output:
+  file: output2.csv
+  type: csv
+  

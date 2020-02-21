@@ -210,7 +210,7 @@ def INDEC(set_year=2015,save_output=True):
 
 def OECD(save_output=True):
   """
-  Function to create a national IO-table using INDEC data as the baseline 
+  Function to create a national IO-table using OECD data 
   """
 
   # load mapping function for industries
