@@ -318,7 +318,7 @@ def estimate(table='INDEC'):
 
     output_ratio = pd.DataFrame((output.sum(level=0,axis=1).sum(axis=1)[:-2]/sum(output.sum(level=0,axis=1).sum(axis=1)[:-2])),columns=['ratio'])        
 
-    new_values = pd.DataFrame(output.sum(level=0,axis=1).sum(axis=1)[:-2],columns=['ratio']).multiply(prov_ratios).divide(output_ratio).fillna(0)
+    #new_values = pd.DataFrame(output.sum(level=0,axis=1).sum(axis=1)[:-2],columns=['ratio']).multiply(prov_ratios).divide(output_ratio).fillna(0)
 
 if __name__ == "__main__":
 
