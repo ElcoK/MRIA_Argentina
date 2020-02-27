@@ -4,7 +4,6 @@ import numpy as np
 import subprocess
 from tqdm import tqdm
 from ras_method import ras_method
-data_path = os.path.join('..','data')
 
 import warnings
 warnings.filterwarnings('ignore')
@@ -20,6 +19,9 @@ def est_trade_value(x,output_new,sector):
 
 
 def estimate(table='INDEC'):
+
+    data_path = os.path.join('..','data')
+
 
     # load sector data
     sectors = list(pd.read_excel(os.path.join(data_path,
@@ -312,13 +314,13 @@ def estimate(table='INDEC'):
 
     output = output.reindex(column_mi_reorder, axis='columns')
 
-    prov_ratios = pd.DataFrame((prov_data.iloc[:16,:24].stack().swaplevel(i=-2,
-             j=-1)/sum(prov_data.iloc[:16,:24].stack().swaplevel(i=-2, 
-             j=-1))),columns=['ratio']).reset_index().groupby(['level_0','level_1']).sum().reindex(output.index)[:384]
+    mrio_arg = ras_method(np.array(output).T,np.array(list(output.sum(axis=1))[:384]+list(output.sum(axis=0)[-48:])),
+                        np.array(list(output.sum(axis=1))[:384]+[output.loc[('Total','ValueA'),:].sum(),output.loc[('Total','IMP'),:].sum()]), 
+                        eps=1e-3,print_out=False)
 
-    output_ratio = pd.DataFrame((output.sum(level=0,axis=1).sum(axis=1)[:-2]/sum(output.sum(level=0,axis=1).sum(axis=1)[:-2])),columns=['ratio'])        
+    mrio_argentina = pd.DataFrame(mrio_arg.T,index=output.index,columns=output.columns)
 
-    #new_values = pd.DataFrame(output.sum(level=0,axis=1).sum(axis=1)[:-2],columns=['ratio']).multiply(prov_ratios).divide(output_ratio).fillna(0)
+    mrio_argentina.to_csv(os.path.join(data_path,'MRIO','mrio_argentina.csv'))
 
 if __name__ == "__main__":
 
