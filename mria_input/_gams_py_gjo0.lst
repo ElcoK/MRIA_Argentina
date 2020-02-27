@@ -1,4 +1,4 @@
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                 02/27/20 14:22:49 Page 1
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                 02/27/20 15:35:04 Page 1
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -56,7 +56,7 @@ GDXIN   c:\Projects\MRIA_Argentina\mria_input\Argentina.gdx
   44  Alias(ind,S,Sb)        ;
   45  Alias(rROW,rROWb);
   46  * Define some set specifics
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                 02/27/20 14:22:49 Page 2
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                 02/27/20 15:35:04 Page 2
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -114,7 +114,7 @@ C o m p i l a t i o n
   97  * Total use
   98  Xbase(R,S) = sum((Rb,Sb), Amatrix(R,S,Rb,Sb)*X.L(Rb,Sb)) + FinDem(R,S) + ExpROW(R,S) ;
   99   
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                 02/27/20 14:22:49 Page 3
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                 02/27/20 15:35:04 Page 3
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -172,7 +172,7 @@ C o m p i l a t i o n
  150  * This is the baseline situation, this should give a solutation where Xdiff (see below) should be close to zero.
  151   
  152  option threads=0;
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                 02/27/20 14:22:49 Page 4
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                 02/27/20 15:35:04 Page 4
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -230,7 +230,7 @@ C o m p i l a t i o n
  203           LPIODisMarg supply and use model with endogenous imports but no maximum function /demDisRatMarg,ObjectiveMarg/;
  204   
  205   
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                 02/27/20 14:22:49 Page 5
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                 02/27/20 15:35:04 Page 5
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -254,7 +254,7 @@ C o m p i l a t i o n
  222  Ratmarg(R,S)$(Ratmarg(R,S)<1)=1;
  223  *Ratmarg(R,S) = 9;
  224  display Xmarg,Ratmarg;
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                 02/27/20 14:22:49 Page 6
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                 02/27/20 15:35:04 Page 6
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Include File Summary
 
@@ -265,8 +265,8 @@ Include File Summary
      2       27 GDXIN          1      27  c:\Projects\MRIA_Argentina\mria_input\Argentina.gdx
 
 
-COMPILATION TIME     =        0.062 SECONDS     14 MB  25.0.3 r65947 WEX-WEI
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                 02/27/20 14:22:49 Page 7
+COMPILATION TIME     =        0.031 SECONDS     14 MB  25.0.3 r65947 WEX-WEI
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                 02/27/20 15:35:04 Page 7
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE LPIO Using LP From line 156
 
@@ -324,7 +324,7 @@ demsup(Ciudad_de_Buenos_Aires,A)..  0.991956787576696*X(Ciudad_de_Buenos_Aires,A
       - 2.57055157827904E-7*X(Jujuy,D) - 1.35970731442958E-9*X(Jujuy,E) - 9.21367410278677E-10*X(Jujuy,F) - 1.01104034440558E-9*X(Jujuy,G) - 2.33287195354743E-7*X(Jujuy,H) - 5.16776525279967E-10*X(Jujuy,I) - 2.82093558641386E-10*X(Jujuy,J)
      
       - 2.7232613837101E-9*X(Jujuy,K) - 1.38710948065611E-8*X(Jujuy,L) - 2.90244751433892E-9*X(Jujuy,M) - 1.02149545490226E-8*X(Jujuy,N) - 2.53811316161722E-9*X(Jujuy,O) - 2.6598001615483E-10*X(Jujuy,P) - 1.56000454728751E-8*X(La_Pampa,A)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                 02/27/20 14:22:49 Page 8
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                 02/27/20 15:35:04 Page 8
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE LPIO Using LP From line 156
 
@@ -382,7 +382,7 @@ Equation Listing    SOLVE LPIO Using LP From line 156
       - 9.36061819375568E-10*X(Santa_Cruz,L) - 1.97092340944027E-10*X(Santa_Cruz,M) - 6.94347149555044E-10*X(Santa_Cruz,N) - 1.75378099222804E-10*X(Santa_Cruz,O) - 3.71411728682167E-11*X(Santa_Cruz,P) - 0.000381300761063208*X(Santa_Fe,A)
      
       - 2.40999305247646E-5*X(Santa_Fe,B) - 4.47530633715695E-7*X(Santa_Fe,C) - 0.000345312517958399*X(Santa_Fe,D) - 2.04630318829544E-6*X(Santa_Fe,E) - 1.18479791734657E-6*X(Santa_Fe,F) - 1.99764341162253E-6*X(Santa_Fe,G)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                 02/27/20 14:22:49 Page 9
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                 02/27/20 15:35:04 Page 9
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE LPIO Using LP From line 156
 
@@ -440,7 +440,7 @@ demsup(Ciudad_de_Buenos_Aires,B)..  - 8.34506477250905E-5*X(Ciudad_de_Buenos_Air
       - 2.66898971659443E-10*X(Corrientes,K) - 3.06683820313342E-10*X(Corrientes,L) - 1.2072991444273E-10*X(Corrientes,M) - 7.43494851576145E-10*X(Corrientes,N) - 6.06823502202148E-10*X(Corrientes,O) - 7.35231933472196E-11*X(Corrientes,P)
      
       - 8.63989763586086E-10*X(Chaco,A) - 1.00679423449108E-9*X(Chaco,B) - 6.04852136718227E-10*X(Chaco,C) - 3.98320537576346E-9*X(Chaco,D) - 5.11587084891671E-10*X(Chaco,E) - 3.28840373461902E-9*X(Chaco,F) - 3.33162097095887E-10*X(Chaco,G)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 10
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 10
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE LPIO Using LP From line 156
 
@@ -498,7 +498,7 @@ Equation Listing    SOLVE LPIO Using LP From line 156
       - 1.97923815613275E-8*X(Rio_Negro,B) - 1.74805447320756E-8*X(Rio_Negro,C) - 1.25010292719992E-7*X(Rio_Negro,D) - 1.43353050501062E-8*X(Rio_Negro,E) - 9.82983780082422E-8*X(Rio_Negro,F) - 1.05428716966532E-8*X(Rio_Negro,G)
      
       - 4.04172107399766E-8*X(Rio_Negro,H) - 3.62512535213282E-8*X(Rio_Negro,I) - 6.94215320047557E-9*X(Rio_Negro,J) - 8.42042083728659E-9*X(Rio_Negro,K) - 9.8979934945687E-9*X(Rio_Negro,L) - 3.57003959669691E-9*X(Rio_Negro,M)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 11
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 11
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE LPIO Using LP From line 156
 
@@ -556,7 +556,7 @@ demsup(Ciudad_de_Buenos_Aires,C)..  - 1.14112667258935E-5*X(Ciudad_de_Buenos_Air
       - 0.0195561673369093*X(Ciudad_de_Buenos_Aires,E) - 0.0216062916933648*X(Ciudad_de_Buenos_Aires,F) - 4.8314875223673E-5*X(Ciudad_de_Buenos_Aires,G) - 0.00019093047713437*X(Ciudad_de_Buenos_Aires,H) - 8.70434064226985E-5*X(Ciudad_de_Buenos_Aires,I)
      
       - 4.59428176078568E-5*X(Ciudad_de_Buenos_Aires,J) - 0.00128097463708182*X(Ciudad_de_Buenos_Aires,K) - 0.000244481859907658*X(Ciudad_de_Buenos_Aires,L) - 8.57390010166103E-5*X(Ciudad_de_Buenos_Aires,M)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 12
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 12
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE LPIO Using LP From line 156
 
@@ -614,7 +614,7 @@ Equation Listing    SOLVE LPIO Using LP From line 156
       - 3.29571047601753E-10*X(La_Pampa,G) - 1.35794605047366E-9*X(La_Pampa,H) - 6.67499915788623E-10*X(La_Pampa,I) - 3.49515123255498E-10*X(La_Pampa,J) - 8.52905424752778E-9*X(La_Pampa,K) - 1.71414269015407E-9*X(La_Pampa,L)
      
       - 5.69447581612874E-10*X(La_Pampa,M) - 1.2721376346997E-9*X(La_Pampa,N) - 1.37028646946003E-9*X(La_Pampa,O) - 8.0913819334588E-11*X(La_Pampa,P) - 7.61827380854241E-12*X(La_Rioja,A) - 2.837370967073E-10*X(La_Rioja,B)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 13
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 13
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE LPIO Using LP From line 156
 
@@ -672,7 +672,7 @@ Equation Listing    SOLVE LPIO Using LP From line 156
       - 2.66356745883137E-6*X(Santa_Fe,L) - 1.05723627258162E-6*X(Santa_Fe,M) - 1.7737094870005E-6*X(Santa_Fe,N) - 1.81305869864783E-6*X(Santa_Fe,O) - 9.60354090595473E-11*X(Santa_Fe,P) - 5.13719919582013E-11*X(Santiago_del_Estero,A)
      
       - 1.08283702842417E-9*X(Santiago_del_Estero,B) - 3.51172067283391E-8*X(Santiago_del_Estero,C) - 3.66268286680877E-8*X(Santiago_del_Estero,D) - 8.56210919976287E-8*X(Santiago_del_Estero,E) - 9.7000687981865E-8*X(Santiago_del_Estero,F)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 14
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 14
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE LPIO Using LP From line 156
 
@@ -730,7 +730,7 @@ Objective..  Z - X(Ciudad_de_Buenos_Aires,A) - X(Ciudad_de_Buenos_Aires,B) - X(C
      
       - X(Mendoza,J) - X(Mendoza,K) - X(Mendoza,L) - X(Mendoza,M) - X(Mendoza,N) - X(Mendoza,O) - X(Mendoza,P) - X(Misiones,A) - X(Misiones,B) - X(Misiones,C) - X(Misiones,D) - X(Misiones,E) - X(Misiones,F) - X(Misiones,G) - X(Misiones,H) - X(Misiones,I)
      
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 15
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 15
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE LPIO Using LP From line 156
 
@@ -763,7 +763,7 @@ Equation Listing    SOLVE LPIO Using LP From line 156
      
       - X(Tierra_del_Fuego,O) - X(Tierra_del_Fuego,P) =E= 0 ; (LHS = -9501774.65961017, INFES = 9501774.65961017 ****)
      
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 16
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 16
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIO Using LP From line 156
 
@@ -821,7 +821,7 @@ X(Ciudad_de_Buenos_Aires,A)
   -4.24502E-12  demsup(Catamarca,H)
   -3.54261E-11  demsup(Catamarca,I)
   -2.70279E-12  demsup(Catamarca,J)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 17
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 17
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIO Using LP From line 156
 
@@ -879,7 +879,7 @@ Column Listing      SOLVE LPIO Using LP From line 156
   -4.956651E-9  demsup(Chaco,K)
   -3.122024E-8  demsup(Chaco,L)
   -5.75538E-12  demsup(Chaco,M)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 18
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 18
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIO Using LP From line 156
 
@@ -937,7 +937,7 @@ Column Listing      SOLVE LPIO Using LP From line 156
   -1.84471E-11  demsup(Formosa,N)
   -1.60432E-11  demsup(Formosa,O)
   -6.80972E-12  demsup(Formosa,P)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 19
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 19
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIO Using LP From line 156
 
@@ -995,7 +995,7 @@ Column Listing      SOLVE LPIO Using LP From line 156
   -7.778523E-5  demsup(Mendoza,A)
   -7.578540E-8  demsup(Mendoza,B)
   -5.163718E-6  demsup(Mendoza,C)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 20
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 20
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIO Using LP From line 156
 
@@ -1053,7 +1053,7 @@ Column Listing      SOLVE LPIO Using LP From line 156
   -1.050707E-7  demsup(Rio_Negro,D)
   -3.120243E-8  demsup(Rio_Negro,E)
   -2.00066E-10  demsup(Rio_Negro,F)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 21
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 21
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIO Using LP From line 156
 
@@ -1111,7 +1111,7 @@ Column Listing      SOLVE LPIO Using LP From line 156
   -3.39592E-11  demsup(San_Luis,G)
   -5.03553E-12  demsup(San_Luis,H)
   -7.42407E-11  demsup(San_Luis,I)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 22
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 22
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIO Using LP From line 156
 
@@ -1169,7 +1169,7 @@ Column Listing      SOLVE LPIO Using LP From line 156
   -1.43158E-10  demsup(Santiago_del_Estero,J)
   -1.42883E-10  demsup(Santiago_del_Estero,K)
   -7.65216E-10  demsup(Santiago_del_Estero,L)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 23
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 23
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIO Using LP From line 156
 
@@ -1227,7 +1227,7 @@ X(Ciudad_de_Buenos_Aires,B)
        -0.0088  demsup(Ciudad_de_Buenos_Aires,I)
        -0.0023  demsup(Ciudad_de_Buenos_Aires,J)
        -0.0047  demsup(Ciudad_de_Buenos_Aires,K)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 24
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 24
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIO Using LP From line 156
 
@@ -1285,7 +1285,7 @@ Column Listing      SOLVE LPIO Using LP From line 156
   -4.937945E-7  demsup(Cordoba,L)
   -1.692881E-9  demsup(Cordoba,M)
   -9.697523E-9  demsup(Cordoba,N)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 25
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 25
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIO Using LP From line 156
 
@@ -1343,7 +1343,7 @@ Column Listing      SOLVE LPIO Using LP From line 156
   -3.68825E-10  demsup(Chubut,O)
   -1.19401E-10  demsup(Chubut,P)
   -2.374288E-7  demsup(Entre_Rios,A)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 26
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 26
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIO Using LP From line 156
 
@@ -1401,7 +1401,7 @@ Column Listing      SOLVE LPIO Using LP From line 156
   -8.02982E-13  demsup(La_Pampa,B)
   -1.88114E-10  demsup(La_Pampa,C)
   -1.95279E-10  demsup(La_Pampa,D)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 27
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 27
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIO Using LP From line 156
 
@@ -1459,7 +1459,7 @@ Column Listing      SOLVE LPIO Using LP From line 156
   -8.45483E-10  demsup(Misiones,E)
   -2.32598E-13  demsup(Misiones,F)
   -1.239080E-8  demsup(Misiones,G)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 28
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 28
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIO Using LP From line 156
 
@@ -1517,7 +1517,7 @@ Column Listing      SOLVE LPIO Using LP From line 156
   -1.533100E-9  demsup(Salta,H)
   -4.568083E-9  demsup(Salta,I)
   -4.45961E-10  demsup(Salta,J)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 29
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 29
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIO Using LP From line 156
 
@@ -1575,7 +1575,7 @@ Column Listing      SOLVE LPIO Using LP From line 156
   -3.026085E-9  demsup(Santa_Cruz,K)
   -5.812629E-9  demsup(Santa_Cruz,L)
   -8.19680E-12  demsup(Santa_Cruz,M)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 30
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 30
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIO Using LP From line 156
 
@@ -1633,7 +1633,7 @@ Column Listing      SOLVE LPIO Using LP From line 156
   -6.66315E-11  demsup(Tucuman,N)
   -7.90413E-10  demsup(Tucuman,O)
   -3.07590E-10  demsup(Tucuman,P)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 31
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 31
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIO Using LP From line 156
 
@@ -1691,7 +1691,7 @@ X(Ciudad_de_Buenos_Aires,C)
   -1.061442E-7  demsup(Buenos_Aires,M)
   -3.742023E-5  demsup(Buenos_Aires,N)
        -0.0001  demsup(Buenos_Aires,O)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 32
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 32
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIO Using LP From line 156
 
@@ -1749,7 +1749,7 @@ Column Listing      SOLVE LPIO Using LP From line 156
   -3.24410E-13  demsup(Corrientes,P)
   -3.405362E-9  demsup(Chaco,A)
   -9.92666E-10  demsup(Chaco,B)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 33
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 33
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIO Using LP From line 156
 
@@ -1807,7 +1807,7 @@ Column Listing      SOLVE LPIO Using LP From line 156
   -3.618933E-8  demsup(Formosa,C)
   -9.51558E-10  demsup(Formosa,D)
   -3.66098E-10  demsup(Formosa,E)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 34
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 34
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIO Using LP From line 156
 
@@ -1865,7 +1865,7 @@ Column Listing      SOLVE LPIO Using LP From line 156
   -5.47382E-17  demsup(La_Rioja,F)
   -8.59088E-16  demsup(La_Rioja,G)
   -7.91828E-16  demsup(La_Rioja,H)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 35
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 35
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIO Using LP From line 156
 
@@ -1923,7 +1923,7 @@ Column Listing      SOLVE LPIO Using LP From line 156
   -8.279926E-8  demsup(Neuquen,I)
   -5.911866E-8  demsup(Neuquen,J)
   -2.072841E-7  demsup(Neuquen,K)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 36
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 36
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIO Using LP From line 156
 
@@ -1981,7 +1981,7 @@ Column Listing      SOLVE LPIO Using LP From line 156
   -1.10694E-10  demsup(San_Juan,L)
   -2.78520E-14  demsup(San_Juan,M)
   -9.62825E-12  demsup(San_Juan,N)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 37
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 37
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIO Using LP From line 156
 
@@ -2039,7 +2039,7 @@ Column Listing      SOLVE LPIO Using LP From line 156
   -2.838127E-7  demsup(Santa_Fe,O)
   -7.625184E-8  demsup(Santa_Fe,P)
   -2.03716E-10  demsup(Santiago_del_Estero,A)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 38
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 38
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIO Using LP From line 156
 
@@ -2096,7 +2096,7 @@ Column Listing      SOLVE LPIO Using LP From line 156
        -1       Objective
 
 REMAINING 381 ENTRIES SKIPPED
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 39
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 39
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Model Statistics    SOLVE LPIO Using LP From line 156
 
@@ -2108,11 +2108,11 @@ BLOCKS OF VARIABLES           2     SINGLE VARIABLES          385
 NON ZERO ELEMENTS       147,841
 
 
-GENERATION TIME      =        0.203 SECONDS     35 MB  25.0.3 r65947 WEX-WEI
+GENERATION TIME      =        0.093 SECONDS     35 MB  25.0.3 r65947 WEX-WEI
 
 
-EXECUTION TIME       =        0.469 SECONDS     35 MB  25.0.3 r65947 WEX-WEI
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 40
+EXECUTION TIME       =        0.297 SECONDS     35 MB  25.0.3 r65947 WEX-WEI
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 40
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIO Using LP From line 156
 
@@ -2127,7 +2127,7 @@ Solution Report     SOLVE LPIO Using LP From line 156
 **** MODEL STATUS      1 Optimal                   
 **** OBJECTIVE VALUE          9501774.6596
 
- RESOURCE USAGE, LIMIT          0.765     10000.000
+ RESOURCE USAGE, LIMIT          0.516     10000.000
  ITERATION COUNT, LIMIT         1    2000000000
 
 CONOPT 4         25.0.3 r65947 Released Mar 21, 2018 WEI x86 64bit/MS Windows 
@@ -2152,7 +2152,7 @@ CONOPT 4         25.0.3 r65947 Released Mar 21, 2018 WEI x86 64bit/MS Windows
  ** Optimal solution. There are no superbasic variables.
  
  
- CONOPT time Total                            0.765 seconds
+ CONOPT time Total                            0.527 seconds
    of which: Function evaluations             0.000 =  0.0%
              1st Derivative evaluations       0.000 =  0.0%
  
@@ -2170,7 +2170,7 @@ Ciudad_de_Buenos_Aires.F     99915.6187     99915.6187        +INF            1.
 Ciudad_de_Buenos_Aires.G    223885.5499    223885.5499        +INF            1.0655      
 Ciudad_de_Buenos_Aires.H     81768.5923     81768.5923        +INF            1.1040      
 Ciudad_de_Buenos_Aires.I    157453.7978    157453.7978        +INF            1.1502      
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 41
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 41
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIO Using LP From line 156
 
@@ -2228,7 +2228,7 @@ Cordoba               .G     40724.0138     40724.0138        +INF            1.
 Cordoba               .H     10943.6095     10943.6095        +INF            1.2169      
 Cordoba               .I     28969.2571     28969.2571        +INF            1.2227      
 Cordoba               .J     10481.0988     10481.0988        +INF            1.1651      
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 42
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 42
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIO Using LP From line 156
 
@@ -2286,7 +2286,7 @@ Chubut                .H      1109.6941      1109.6941        +INF            1.
 Chubut                .I      2022.4242      2022.4242        +INF            1.0841      
 Chubut                .J       789.3903       789.3903        +INF            1.0542      
 Chubut                .K      2036.1919      2036.1919        +INF            1.0561      
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 43
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 43
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIO Using LP From line 156
 
@@ -2344,7 +2344,7 @@ Jujuy                 .I       420.0549       420.0549        +INF            1.
 Jujuy                 .J       127.1367       127.1367        +INF            1.0263      
 Jujuy                 .K       335.5711       335.5711        +INF            1.0118      
 Jujuy                 .L       387.8098       387.8098        +INF            1.0196      
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 44
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 44
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIO Using LP From line 156
 
@@ -2402,7 +2402,7 @@ Mendoza               .J      3023.7024      3023.7024        +INF            1.
 Mendoza               .K      7306.6148      7306.6148        +INF            1.0191      
 Mendoza               .L      6761.1551      6761.1551        +INF            1.0226      
 Mendoza               .M      4189.9004      4189.9004        +INF            1.0087      
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 45
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 45
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIO Using LP From line 156
 
@@ -2460,7 +2460,7 @@ Rio_Negro             .K      1045.1864      1045.1864        +INF            1.
 Rio_Negro             .L       889.3168       889.3168        +INF            1.0119      
 Rio_Negro             .M       455.6015       455.6015        +INF            1.0047      
 Rio_Negro             .N       576.7649       576.7649        +INF            1.0145      
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 46
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 46
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIO Using LP From line 156
 
@@ -2518,7 +2518,7 @@ San_Luis              .L       808.3240       808.3240        +INF            1.
 San_Luis              .M       581.4171       581.4171        +INF            1.0091      
 San_Luis              .N       573.4889       573.4889        +INF            1.0359      
 San_Luis              .O       333.7244       333.7244        +INF            1.0389      
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 47
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 47
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIO Using LP From line 156
 
@@ -2576,7 +2576,7 @@ Santiago_del_Estero   .M       304.4128       304.4128        +INF            1.
 Santiago_del_Estero   .N       355.7375       355.7375        +INF            1.0099      
 Santiago_del_Estero   .O       194.3807       194.3807        +INF            1.0122      
 Santiago_del_Estero   .P        30.9499        30.9499        +INF            1.0000      
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 48
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 48
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIO Using LP From line 156
 
@@ -2629,7 +2629,7 @@ Tierra_del_Fuego      .P        18.1108        18.1108        +INF            1.
 ---- VAR Z                 -INF      9501774.6596        +INF             .          
 
   Z  objective
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 49
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 49
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIO Using LP From line 156
 
@@ -2687,7 +2687,7 @@ Catamarca             .N          .           181.0406       193.9721          .
 Catamarca             .O          .           106.5439       114.1542          .          
 Catamarca             .P          .            17.2595        18.4923          .          
 Cordoba               .A          .         42130.6207     45139.9508          .          
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 50
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 50
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIO Using LP From line 156
 
@@ -2745,7 +2745,7 @@ Chaco                 .O          .           344.0765       368.6534          .
 Chaco                 .P          .            50.4639        54.0684          .          
 Chubut                .A          .           725.0938       776.8862          .          
 Chubut                .B          .           485.9201       520.6286          .          
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 51
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 51
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIO Using LP From line 156
 
@@ -2803,7 +2803,7 @@ Formosa               .P          .             9.0236         9.6681          .
 Jujuy                 .A          .           235.1676       251.9653          .          
 Jujuy                 .B          .             3.3791         3.6205          .          
 Jujuy                 .C          .           255.2762       273.5102          .          
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 52
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 52
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIO Using LP From line 156
 
@@ -2861,7 +2861,7 @@ Mendoza               .A          .          4804.4546      5147.6299          .
 Mendoza               .B          .            81.5401        87.3644          .          
 Mendoza               .C          .         39375.4699     42188.0035          .          
 Mendoza               .D          .         33540.8771     35936.6540          .          
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 53
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 53
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIO Using LP From line 156
 
@@ -2919,7 +2919,7 @@ Rio_Negro             .B          .            46.0504        49.3397          .
 Rio_Negro             .C          .          4166.3268      4463.9216          .          
 Rio_Negro             .D          .          2052.5516      2199.1625          .          
 Rio_Negro             .E          .           415.7082       445.4017          .          
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 54
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 54
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIO Using LP From line 156
 
@@ -2977,7 +2977,7 @@ San_Luis              .C          .           479.8323       514.1060          .
 San_Luis              .D          .          5638.2196      6040.9495          .          
 San_Luis              .E          .           118.1532       126.5927          .          
 San_Luis              .F          .           686.1290       735.1382          .          
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 55
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 55
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIO Using LP From line 156
 
@@ -3035,7 +3035,7 @@ Santiago_del_Estero   .D          .          1206.3438      1292.5113          .
 Santiago_del_Estero   .E          .            75.1653        80.5342          .          
 Santiago_del_Estero   .F          .           381.2183       408.4482          .          
 Santiago_del_Estero   .G          .          1284.0294      1375.7458          .          
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 56
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 56
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIO Using LP From line 156
 
@@ -3090,7 +3090,7 @@ Tierra_del_Fuego      .P          .            18.2358        19.5383          .
 **** REPORT SUMMARY :        0     NONOPT
                              0 INFEASIBLE
                              0  UNBOUNDED
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 57
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 57
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE LPIODisMarg Using NLP From line 219
 
@@ -3148,7 +3148,7 @@ demDisRatMarg(Ciudad_de_Buenos_Aires,A)..  0.991956787576696*X(Ciudad_de_Buenos_
       - 2.57055157827904E-7*X(Jujuy,D) - 1.35970731442958E-9*X(Jujuy,E) - 9.21367410278677E-10*X(Jujuy,F) - 1.01104034440558E-9*X(Jujuy,G) - 2.33287195354743E-7*X(Jujuy,H) - 5.16776525279967E-10*X(Jujuy,I) - 2.82093558641386E-10*X(Jujuy,J)
      
       - 2.7232613837101E-9*X(Jujuy,K) - 1.38710948065611E-8*X(Jujuy,L) - 2.90244751433892E-9*X(Jujuy,M) - 1.02149545490226E-8*X(Jujuy,N) - 2.53811316161722E-9*X(Jujuy,O) - 2.6598001615483E-10*X(Jujuy,P) - 1.56000454728751E-8*X(La_Pampa,A)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 58
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 58
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE LPIODisMarg Using NLP From line 219
 
@@ -3206,7 +3206,7 @@ Equation Listing    SOLVE LPIODisMarg Using NLP From line 219
       - 9.36061819375568E-10*X(Santa_Cruz,L) - 1.97092340944027E-10*X(Santa_Cruz,M) - 6.94347149555044E-10*X(Santa_Cruz,N) - 1.75378099222804E-10*X(Santa_Cruz,O) - 3.71411728682167E-11*X(Santa_Cruz,P) - 0.000381300761063208*X(Santa_Fe,A)
      
       - 2.40999305247646E-5*X(Santa_Fe,B) - 4.47530633715695E-7*X(Santa_Fe,C) - 0.000345312517958399*X(Santa_Fe,D) - 2.04630318829544E-6*X(Santa_Fe,E) - 1.18479791734657E-6*X(Santa_Fe,F) - 1.99764341162253E-6*X(Santa_Fe,G)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 59
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 59
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE LPIODisMarg Using NLP From line 219
 
@@ -3264,7 +3264,7 @@ demDisRatMarg(Ciudad_de_Buenos_Aires,B)..  - 8.34506477250905E-5*X(Ciudad_de_Bue
       - 3.30864037626573E-5*X(Buenos_Aires,C) - 0.000155983070441*X(Buenos_Aires,D) - 1.92325179056187E-5*X(Buenos_Aires,E) - 0.000107409631399169*X(Buenos_Aires,F) - 2.08204554643045E-5*X(Buenos_Aires,G) - 5.76836537639283E-5*X(Buenos_Aires,H)
      
       - 4.45761990740724E-5*X(Buenos_Aires,I) - 1.02674868932992E-5*X(Buenos_Aires,J) - 1.78879564231544E-5*X(Buenos_Aires,K) - 1.71844308419805E-5*X(Buenos_Aires,L) - 8.44030021382486E-6*X(Buenos_Aires,M) - 3.60413529292487E-5*X(Buenos_Aires,N)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 60
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 60
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE LPIODisMarg Using NLP From line 219
 
@@ -3322,7 +3322,7 @@ Equation Listing    SOLVE LPIODisMarg Using NLP From line 219
       - 1.45256235087219E-11*X(La_Rioja,H) - 1.19610403955262E-11*X(La_Rioja,I) - 6.03937690444277E-12*X(La_Rioja,J) - 4.08632944657648E-12*X(La_Rioja,K) - 3.97502387498028E-12*X(La_Rioja,L) - 3.81952008161461E-12*X(La_Rioja,M)
      
       - 9.40191937935259E-12*X(La_Rioja,N) - 1.02559274224087E-11*X(La_Rioja,O) - 2.75849772651553E-11*X(La_Rioja,P) - 1.15607572370917E-8*X(Mendoza,A) - 8.48030586980324E-9*X(Mendoza,B) - 7.17029346264414E-9*X(Mendoza,C)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 61
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 61
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE LPIODisMarg Using NLP From line 219
 
@@ -3380,7 +3380,7 @@ Equation Listing    SOLVE LPIODisMarg Using NLP From line 219
       - 4.59143384126501E-10*X(Santiago_del_Estero,I) - 9.8966229937137E-11*X(Santiago_del_Estero,J) - 1.11632670228952E-10*X(Santiago_del_Estero,K) - 1.29253845355542E-10*X(Santiago_del_Estero,L) - 5.3962315174453E-11*X(Santiago_del_Estero,M)
      
       - 3.13051429927887E-10*X(Santiago_del_Estero,N) - 2.64315959833217E-10*X(Santiago_del_Estero,O) - 9.00841804710717E-11*X(Santiago_del_Estero,P) - 3.53051048178938E-10*X(Tucuman,A) - 4.50512160862037E-10*X(Tucuman,B)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 62
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 62
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE LPIODisMarg Using NLP From line 219
 
@@ -3438,7 +3438,7 @@ demDisRatMarg(Ciudad_de_Buenos_Aires,C)..  - 1.14112667258935E-5*X(Ciudad_de_Bue
       - 6.38336149386528E-8*X(Cordoba,A) - 2.17608427393322E-7*X(Cordoba,B) - 5.41637556878158E-5*X(Cordoba,C) - 4.87275337095347E-5*X(Cordoba,D) - 0.000118145276818168*X(Cordoba,E) - 0.000125881409405247*X(Cordoba,F) - 2.94008821083697E-7*X(Cordoba,G)
      
       - 1.06917533970908E-6*X(Cordoba,H) - 5.19617509263087E-7*X(Cordoba,I) - 2.81080422322578E-7*X(Cordoba,J) - 7.79245317718724E-6*X(Cordoba,K) - 1.48530050280836E-6*X(Cordoba,L) - 5.2393840908786E-7*X(Cordoba,M) - 1.05353554703441E-6*X(Cordoba,N)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 63
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 63
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE LPIODisMarg Using NLP From line 219
 
@@ -3496,7 +3496,7 @@ Equation Listing    SOLVE LPIODisMarg Using NLP From line 219
       - 7.01057787471135E-8*X(Misiones,J) - 1.7835226339033E-6*X(Misiones,K) - 3.55185827377741E-7*X(Misiones,L) - 1.17398747111357E-7*X(Misiones,M) - 2.6150916318947E-7*X(Misiones,N) - 2.79932190793728E-7*X(Misiones,O) - 2.06161273117917E-9*X(Misiones,P)
      
       - 1.7005287277439E-7*X(Neuquen,A) - 5.28102632813253E-7*X(Neuquen,B) - 0.000120925506212823*X(Neuquen,C) - 0.000126340666541777*X(Neuquen,D) - 0.000253395451162289*X(Neuquen,E) - 0.000290356839174341*X(Neuquen,F) - 7.06120671556515E-7*X(Neuquen,G)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 64
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 64
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE LPIODisMarg Using NLP From line 219
 
@@ -3554,7 +3554,7 @@ Equation Listing    SOLVE LPIODisMarg Using NLP From line 219
       - 1.52154885531941E-9*X(Tierra_del_Fuego,J) - 3.76155030348714E-8*X(Tierra_del_Fuego,K) - 7.57980708960855E-9*X(Tierra_del_Fuego,L) - 2.48486421912175E-9*X(Tierra_del_Fuego,M) - 5.62016353064193E-9*X(Tierra_del_Fuego,N)
      
       - 6.05837341263958E-9*X(Tierra_del_Fuego,O) - 1.78004812963299E-10*X(Tierra_del_Fuego,P) + Rationdem(Ciudad_de_Buenos_Aires,C) + 0.927133410489558*Rationdem(Buenos_Aires,C) + 0.00394152439241655*Rationdem(Catamarca,C)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 65
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 65
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE LPIODisMarg Using NLP From line 219
 
@@ -3612,7 +3612,7 @@ ObjectiveMarg..  Z - X(Ciudad_de_Buenos_Aires,A) - X(Ciudad_de_Buenos_Aires,B) -
      
       - X(La_Rioja,F) - X(La_Rioja,G) - X(La_Rioja,H) - X(La_Rioja,I) - X(La_Rioja,J) - X(La_Rioja,K) - X(La_Rioja,L) - X(La_Rioja,M) - X(La_Rioja,N) - X(La_Rioja,O) - X(La_Rioja,P) - X(Mendoza,A) - X(Mendoza,B) - X(Mendoza,C) - X(Mendoza,D)
      
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 66
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 66
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE LPIODisMarg Using NLP From line 219
 
@@ -3670,7 +3670,7 @@ Equation Listing    SOLVE LPIODisMarg Using NLP From line 219
       + 0.403802120651307*Rationdem(Cordoba,B) + 1.97195898049233*Rationdem(Cordoba,C) + 0.239864137680883*Rationdem(Cordoba,D) + 0.331633603412192*Rationdem(Cordoba,E) + 0.0868905833928434*Rationdem(Cordoba,F) + 0.112416123289853*Rationdem(Cordoba,G)
      
       + 0.116225083403442*Rationdem(Cordoba,H) + 0.104758311690192*Rationdem(Cordoba,I) + 0.103108225627708*Rationdem(Cordoba,J) + 0.107335358314522*Rationdem(Cordoba,K) + 0.106070565066566*Rationdem(Cordoba,L) + 0.0826837890595192*Rationdem(Cordoba,M)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 67
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 67
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE LPIODisMarg Using NLP From line 219
 
@@ -3728,7 +3728,7 @@ Equation Listing    SOLVE LPIODisMarg Using NLP From line 219
       + 1.23454131749403*Rationdem(Mendoza,C) + 0.462528324366909*Rationdem(Mendoza,D) + 0.655872209804669*Rationdem(Mendoza,E) + 0.196865317777102*Rationdem(Mendoza,F) + 0.261391260184535*Rationdem(Mendoza,G) + 0.266512738115761*Rationdem(Mendoza,H)
      
       + 0.230018765258671*Rationdem(Mendoza,I) + 0.236474372505129*Rationdem(Mendoza,J) + 0.24788088645336*Rationdem(Mendoza,K) + 0.245255243850373*Rationdem(Mendoza,L) + 0.185033274871729*Rationdem(Mendoza,M) + 0.219488493610166*Rationdem(Mendoza,N)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 68
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 68
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE LPIODisMarg Using NLP From line 219
 
@@ -3786,7 +3786,7 @@ Equation Listing    SOLVE LPIODisMarg Using NLP From line 219
       + 0.501200191881717*Rationdem(Santa_Fe,N) + 0.533110338291282*Rationdem(Santa_Fe,O) + 0.588434286303932*Rationdem(Santa_Fe,P) + 0.297381441308299*Rationdem(Santiago_del_Estero,A) + 0.369914112291999*Rationdem(Santiago_del_Estero,B)
      
       + 0.838894961163989*Rationdem(Santiago_del_Estero,C) + 0.482975841484184*Rationdem(Santiago_del_Estero,D) + 0.392755364967891*Rationdem(Santiago_del_Estero,E) + 0.212886155551149*Rationdem(Santiago_del_Estero,F)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 69
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 69
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE LPIODisMarg Using NLP From line 219
 
@@ -3844,7 +3844,7 @@ Equation Listing    SOLVE LPIODisMarg Using NLP From line 219
       - 0.136812977948617*DisImp(Corrientes,P) - 0.521266014605802*DisImp(Chaco,A) - 0.661979221486994*DisImp(Chaco,B) - 1.59136540783558*DisImp(Chaco,C) - 0.72316627712818*DisImp(Chaco,D) - 0.81704555623928*DisImp(Chaco,E)
      
       - 0.310460660315982*DisImp(Chaco,F) - 0.4293418502726*DisImp(Chaco,G) - 0.493586734039166*DisImp(Chaco,H) - 0.32534738609267*DisImp(Chaco,I) - 0.354202350351231*DisImp(Chaco,J) - 0.393899948918176*DisImp(Chaco,K) - 0.358662191838139*DisImp(Chaco,L)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 70
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 70
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE LPIODisMarg Using NLP From line 219
 
@@ -3902,7 +3902,7 @@ Equation Listing    SOLVE LPIODisMarg Using NLP From line 219
       - 0.0987540765932845*DisImp(Neuquen,M) - 0.126181686308618*DisImp(Neuquen,N) - 0.124155810711454*DisImp(Neuquen,O) - 0.130085980625059*DisImp(Neuquen,P) - 0.253413891693261*DisImp(Rio_Negro,A) - 0.173581131818776*DisImp(Rio_Negro,B)
      
       - 0.487851604677528*DisImp(Rio_Negro,C) - 0.21392015818306*DisImp(Rio_Negro,D) - 0.208981223127841*DisImp(Rio_Negro,E) - 0.131016819179868*DisImp(Rio_Negro,F) - 0.145774846245943*DisImp(Rio_Negro,G) - 0.138325348238214*DisImp(Rio_Negro,H)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 71
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 71
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE LPIODisMarg Using NLP From line 219
 
@@ -3959,7 +3959,7 @@ Equation Listing    SOLVE LPIODisMarg Using NLP From line 219
      
       (LHS = 9.31322574615479E-9, INFES = 2434961.38520134 ****)
      
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 72
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 72
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIODisMarg Using NLP From line 219
 
@@ -4017,7 +4017,7 @@ X(Ciudad_de_Buenos_Aires,A)
   -4.24502E-12  demDisRatMarg(Catamarca,H)
   -3.54261E-11  demDisRatMarg(Catamarca,I)
   -2.70279E-12  demDisRatMarg(Catamarca,J)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 73
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 73
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIODisMarg Using NLP From line 219
 
@@ -4075,7 +4075,7 @@ Column Listing      SOLVE LPIODisMarg Using NLP From line 219
   -4.956651E-9  demDisRatMarg(Chaco,K)
   -3.122024E-8  demDisRatMarg(Chaco,L)
   -5.75538E-12  demDisRatMarg(Chaco,M)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 74
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 74
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIODisMarg Using NLP From line 219
 
@@ -4133,7 +4133,7 @@ Column Listing      SOLVE LPIODisMarg Using NLP From line 219
   -1.84471E-11  demDisRatMarg(Formosa,N)
   -1.60432E-11  demDisRatMarg(Formosa,O)
   -6.80972E-12  demDisRatMarg(Formosa,P)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 75
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 75
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIODisMarg Using NLP From line 219
 
@@ -4191,7 +4191,7 @@ Column Listing      SOLVE LPIODisMarg Using NLP From line 219
   -7.778523E-5  demDisRatMarg(Mendoza,A)
   -7.578540E-8  demDisRatMarg(Mendoza,B)
   -5.163718E-6  demDisRatMarg(Mendoza,C)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 76
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 76
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIODisMarg Using NLP From line 219
 
@@ -4249,7 +4249,7 @@ Column Listing      SOLVE LPIODisMarg Using NLP From line 219
   -1.050707E-7  demDisRatMarg(Rio_Negro,D)
   -3.120243E-8  demDisRatMarg(Rio_Negro,E)
   -2.00066E-10  demDisRatMarg(Rio_Negro,F)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 77
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 77
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIODisMarg Using NLP From line 219
 
@@ -4307,7 +4307,7 @@ Column Listing      SOLVE LPIODisMarg Using NLP From line 219
   -3.39592E-11  demDisRatMarg(San_Luis,G)
   -5.03553E-12  demDisRatMarg(San_Luis,H)
   -7.42407E-11  demDisRatMarg(San_Luis,I)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 78
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 78
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIODisMarg Using NLP From line 219
 
@@ -4365,7 +4365,7 @@ Column Listing      SOLVE LPIODisMarg Using NLP From line 219
   -1.43158E-10  demDisRatMarg(Santiago_del_Estero,J)
   -1.42883E-10  demDisRatMarg(Santiago_del_Estero,K)
   -7.65216E-10  demDisRatMarg(Santiago_del_Estero,L)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 79
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 79
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIODisMarg Using NLP From line 219
 
@@ -4423,7 +4423,7 @@ X(Ciudad_de_Buenos_Aires,B)
        -0.0088  demDisRatMarg(Ciudad_de_Buenos_Aires,I)
        -0.0023  demDisRatMarg(Ciudad_de_Buenos_Aires,J)
        -0.0047  demDisRatMarg(Ciudad_de_Buenos_Aires,K)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 80
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 80
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIODisMarg Using NLP From line 219
 
@@ -4481,7 +4481,7 @@ Column Listing      SOLVE LPIODisMarg Using NLP From line 219
   -4.937945E-7  demDisRatMarg(Cordoba,L)
   -1.692881E-9  demDisRatMarg(Cordoba,M)
   -9.697523E-9  demDisRatMarg(Cordoba,N)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 81
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 81
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIODisMarg Using NLP From line 219
 
@@ -4539,7 +4539,7 @@ Column Listing      SOLVE LPIODisMarg Using NLP From line 219
   -3.68825E-10  demDisRatMarg(Chubut,O)
   -1.19401E-10  demDisRatMarg(Chubut,P)
   -2.374288E-7  demDisRatMarg(Entre_Rios,A)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 82
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 82
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIODisMarg Using NLP From line 219
 
@@ -4597,7 +4597,7 @@ Column Listing      SOLVE LPIODisMarg Using NLP From line 219
   -8.02982E-13  demDisRatMarg(La_Pampa,B)
   -1.88114E-10  demDisRatMarg(La_Pampa,C)
   -1.95279E-10  demDisRatMarg(La_Pampa,D)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 83
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 83
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIODisMarg Using NLP From line 219
 
@@ -4655,7 +4655,7 @@ Column Listing      SOLVE LPIODisMarg Using NLP From line 219
   -8.45483E-10  demDisRatMarg(Misiones,E)
   -2.32598E-13  demDisRatMarg(Misiones,F)
   -1.239080E-8  demDisRatMarg(Misiones,G)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 84
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 84
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIODisMarg Using NLP From line 219
 
@@ -4713,7 +4713,7 @@ Column Listing      SOLVE LPIODisMarg Using NLP From line 219
   -1.533100E-9  demDisRatMarg(Salta,H)
   -4.568083E-9  demDisRatMarg(Salta,I)
   -4.45961E-10  demDisRatMarg(Salta,J)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 85
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 85
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIODisMarg Using NLP From line 219
 
@@ -4771,7 +4771,7 @@ Column Listing      SOLVE LPIODisMarg Using NLP From line 219
   -3.026085E-9  demDisRatMarg(Santa_Cruz,K)
   -5.812629E-9  demDisRatMarg(Santa_Cruz,L)
   -8.19680E-12  demDisRatMarg(Santa_Cruz,M)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 86
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 86
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIODisMarg Using NLP From line 219
 
@@ -4829,7 +4829,7 @@ Column Listing      SOLVE LPIODisMarg Using NLP From line 219
   -6.66315E-11  demDisRatMarg(Tucuman,N)
   -7.90413E-10  demDisRatMarg(Tucuman,O)
   -3.07590E-10  demDisRatMarg(Tucuman,P)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 87
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 87
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIODisMarg Using NLP From line 219
 
@@ -4887,7 +4887,7 @@ X(Ciudad_de_Buenos_Aires,C)
   -1.061442E-7  demDisRatMarg(Buenos_Aires,M)
   -3.742023E-5  demDisRatMarg(Buenos_Aires,N)
        -0.0001  demDisRatMarg(Buenos_Aires,O)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 88
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 88
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIODisMarg Using NLP From line 219
 
@@ -4945,7 +4945,7 @@ Column Listing      SOLVE LPIODisMarg Using NLP From line 219
   -3.24410E-13  demDisRatMarg(Corrientes,P)
   -3.405362E-9  demDisRatMarg(Chaco,A)
   -9.92666E-10  demDisRatMarg(Chaco,B)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 89
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 89
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIODisMarg Using NLP From line 219
 
@@ -5003,7 +5003,7 @@ Column Listing      SOLVE LPIODisMarg Using NLP From line 219
   -3.618933E-8  demDisRatMarg(Formosa,C)
   -9.51558E-10  demDisRatMarg(Formosa,D)
   -3.66098E-10  demDisRatMarg(Formosa,E)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 90
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 90
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIODisMarg Using NLP From line 219
 
@@ -5061,7 +5061,7 @@ Column Listing      SOLVE LPIODisMarg Using NLP From line 219
   -5.47382E-17  demDisRatMarg(La_Rioja,F)
   -8.59088E-16  demDisRatMarg(La_Rioja,G)
   -7.91828E-16  demDisRatMarg(La_Rioja,H)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 91
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 91
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIODisMarg Using NLP From line 219
 
@@ -5119,7 +5119,7 @@ Column Listing      SOLVE LPIODisMarg Using NLP From line 219
   -8.279926E-8  demDisRatMarg(Neuquen,I)
   -5.911866E-8  demDisRatMarg(Neuquen,J)
   -2.072841E-7  demDisRatMarg(Neuquen,K)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 92
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 92
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIODisMarg Using NLP From line 219
 
@@ -5177,7 +5177,7 @@ Column Listing      SOLVE LPIODisMarg Using NLP From line 219
   -1.10694E-10  demDisRatMarg(San_Juan,L)
   -2.78520E-14  demDisRatMarg(San_Juan,M)
   -9.62825E-12  demDisRatMarg(San_Juan,N)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 93
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 93
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIODisMarg Using NLP From line 219
 
@@ -5235,7 +5235,7 @@ Column Listing      SOLVE LPIODisMarg Using NLP From line 219
   -2.838127E-7  demDisRatMarg(Santa_Fe,O)
   -7.625184E-8  demDisRatMarg(Santa_Fe,P)
   -2.03716E-10  demDisRatMarg(Santiago_del_Estero,A)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 94
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 94
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIODisMarg Using NLP From line 219
 
@@ -5292,7 +5292,7 @@ Column Listing      SOLVE LPIODisMarg Using NLP From line 219
        -1       ObjectiveMarg
 
 REMAINING 381 ENTRIES SKIPPED
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 95
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 95
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIODisMarg Using NLP From line 219
 
@@ -5350,7 +5350,7 @@ Rationdem(Ciudad_de_Buenos_Aires,B)
         0.0002  demDisRatMarg(San_Luis,B)
         0.0256  demDisRatMarg(Santa_Cruz,B)
         0.0389  demDisRatMarg(Santa_Fe,B)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 96
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 96
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIODisMarg Using NLP From line 219
 
@@ -5408,7 +5408,7 @@ DisImp(Ciudad_de_Buenos_Aires,A)
        -0.0052  demDisRatMarg(Jujuy,A)
        -0.0008  demDisRatMarg(La_Pampa,A)
   -2.560993E-6  demDisRatMarg(La_Rioja,A)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 97
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 97
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIODisMarg Using NLP From line 219
 
@@ -5466,7 +5466,7 @@ DisImp(Ciudad_de_Buenos_Aires,C)
        -0.0002  demDisRatMarg(Corrientes,C)
        -0.0058  demDisRatMarg(Chaco,C)
        -0.1458  demDisRatMarg(Chubut,C)
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 98
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 98
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE LPIODisMarg Using NLP From line 219
 
@@ -5493,7 +5493,7 @@ Column Listing      SOLVE LPIODisMarg Using NLP From line 219
        -2.7827  ObjectiveMarg
 
 REMAINING 381 ENTRIES SKIPPED
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 14:22:49 Page 99
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                02/27/20 15:35:04 Page 99
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Model Statistics    SOLVE LPIODisMarg Using NLP From line 219
 
@@ -5507,8 +5507,8 @@ DERIVATIVE POOL              20     CONSTANT POOL              16
 CODE LENGTH                   0
 
 
-GENERATION TIME      =        0.188 SECONDS     36 MB  25.0.3 r65947 WEX-WEI
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 14:22:49 Page 100
+GENERATION TIME      =        0.141 SECONDS     36 MB  25.0.3 r65947 WEX-WEI
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 15:35:04 Page 100
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIODisMarg Using NLP From line 219
 
@@ -5523,7 +5523,7 @@ Solution Report     SOLVE LPIODisMarg Using NLP From line 219
 **** MODEL STATUS      1 Optimal                   
 **** OBJECTIVE VALUE         11936736.0448
 
- RESOURCE USAGE, LIMIT          0.735     10000.000
+ RESOURCE USAGE, LIMIT          0.516     10000.000
  ITERATION COUNT, LIMIT         1    2000000000
  EVALUATION ERRORS              0             0
 
@@ -5551,7 +5551,7 @@ CONOPT 4         25.0.3 r65947 Released Mar 21, 2018 WEI x86 64bit/MS Windows
  ** Optimal solution. There are no superbasic variables.
  
  
- CONOPT time Total                            0.742 seconds
+ CONOPT time Total                            0.524 seconds
    of which: Function evaluations             0.000 =  0.0%
              1st Derivative evaluations       0.000 =  0.0%
  
@@ -5566,7 +5566,7 @@ Ciudad_de_Buenos_Aires.C     18562.9836     18562.9836        +INF            1.
 Ciudad_de_Buenos_Aires.D    281367.9014    281367.9014        +INF            1.1392      
 Ciudad_de_Buenos_Aires.E     15972.4634     15972.4634        +INF            1.1700      
 Ciudad_de_Buenos_Aires.F     99915.6187     99915.6187        +INF            1.1945      
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 14:22:49 Page 101
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 15:35:04 Page 101
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIODisMarg Using NLP From line 219
 
@@ -5624,7 +5624,7 @@ Cordoba               .D     68045.9417     68045.9417        +INF            1.
 Cordoba               .E      3144.3360      3144.3360        +INF            1.2153      
 Cordoba               .F     21076.7515     21076.7515        +INF            1.2794      
 Cordoba               .G     40724.0138     40724.0138        +INF            1.0937      
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 14:22:49 Page 102
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 15:35:04 Page 102
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIODisMarg Using NLP From line 219
 
@@ -5682,7 +5682,7 @@ Chubut                .E       698.2446       698.2446        +INF            1.
 Chubut                .F      1480.1566      1480.1566        +INF            1.4592      
 Chubut                .G      2737.9595      2737.9595        +INF            1.0338      
 Chubut                .H      1109.6941      1109.6941        +INF            1.0727      
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 14:22:49 Page 103
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 15:35:04 Page 103
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIODisMarg Using NLP From line 219
 
@@ -5740,7 +5740,7 @@ Jujuy                 .F       245.3392       245.3392        +INF            1.
 Jujuy                 .G       547.1266       547.1266        +INF            1.0138      
 Jujuy                 .H       157.0974       157.0974        +INF            1.0283      
 Jujuy                 .I       420.0549       420.0549        +INF            1.0357      
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 14:22:49 Page 104
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 15:35:04 Page 104
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIODisMarg Using NLP From line 219
 
@@ -5798,7 +5798,7 @@ Mendoza               .G     11445.0503     11445.0503        +INF            1.
 Mendoza               .H      3909.3201      3909.3201        +INF            1.0356      
 Mendoza               .I      7841.4634      7841.4634        +INF            1.0414      
 Mendoza               .J      3023.7024      3023.7024        +INF            1.0280      
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 14:22:49 Page 105
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 15:35:04 Page 105
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIODisMarg Using NLP From line 219
 
@@ -5856,7 +5856,7 @@ Rio_Negro             .H       640.2165       640.2165        +INF            1.
 Rio_Negro             .I       988.8112       988.8112        +INF            1.0202      
 Rio_Negro             .J       357.4639       357.4639        +INF            1.0153      
 Rio_Negro             .K      1045.1864      1045.1864        +INF            1.0092      
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 14:22:49 Page 106
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 15:35:04 Page 106
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIODisMarg Using NLP From line 219
 
@@ -5914,7 +5914,7 @@ San_Luis              .I       932.8520       932.8520        +INF            1.
 San_Luis              .J       379.5338       379.5338        +INF            1.0306      
 San_Luis              .K       846.1507       846.1507        +INF            1.0155      
 San_Luis              .L       808.3240       808.3240        +INF            1.0241      
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 14:22:49 Page 107
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 15:35:04 Page 107
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIODisMarg Using NLP From line 219
 
@@ -5972,7 +5972,7 @@ Santiago_del_Estero   .J       231.1548       231.1548        +INF            1.
 Santiago_del_Estero   .K       533.2206       533.2206        +INF            1.0043      
 Santiago_del_Estero   .L       597.4177       597.4177        +INF            1.0078      
 Santiago_del_Estero   .M       304.4128       304.4128        +INF            1.0028      
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 14:22:49 Page 108
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 15:35:04 Page 108
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIODisMarg Using NLP From line 219
 
@@ -6028,7 +6028,7 @@ Tierra_del_Fuego      .P        18.1108        18.1108        +INF            1.
 ---- VAR Z                 -INF      1.1936736E+7        +INF             .          
 
   Z  objective
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 14:22:49 Page 109
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 15:35:04 Page 109
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIODisMarg Using NLP From line 219
 
@@ -6086,7 +6086,7 @@ Catamarca             .N          .           181.0406       204.2088          .
 Catamarca             .O          .           106.5439       120.5901          .          
 Catamarca             .P          .            17.2595        20.3729          .          
 Cordoba               .A          .         42130.6207     47290.4722          .          
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 14:22:49 Page 110
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 15:35:04 Page 110
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIODisMarg Using NLP From line 219
 
@@ -6144,7 +6144,7 @@ Chaco                 .O          .           344.0765       387.2083          .
 Chaco                 .P          .            50.4639        57.6431          .          
 Chubut                .A          .           725.0938       814.8808          .          
 Chubut                .B          .           485.9201       546.4205          .          
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 14:22:49 Page 111
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 15:35:04 Page 111
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIODisMarg Using NLP From line 219
 
@@ -6202,7 +6202,7 @@ Formosa               .P          .             9.0236        11.1285          .
 Jujuy                 .A          .           235.1676       264.9637          .          
 Jujuy                 .B          .             3.3791         4.7929          .          
 Jujuy                 .C          .           255.2762       287.5345          .          
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 14:22:49 Page 112
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 15:35:04 Page 112
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIODisMarg Using NLP From line 219
 
@@ -6260,7 +6260,7 @@ Mendoza               .A          .          4804.4546      5393.7551          .
 Mendoza               .B          .            81.5401        92.5246          .          
 Mendoza               .C          .         39375.4699     44197.9561          .          
 Mendoza               .D          .         33540.8771     37648.9232          .          
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 14:22:49 Page 113
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 15:35:04 Page 113
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIODisMarg Using NLP From line 219
 
@@ -6318,7 +6318,7 @@ Rio_Negro             .B          .            46.0504        52.6893          .
 Rio_Negro             .C          .          4166.3268      4677.4893          .          
 Rio_Negro             .D          .          2052.5516      2304.8845          .          
 Rio_Negro             .E          .           415.7082       467.6113          .          
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 14:22:49 Page 114
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 15:35:04 Page 114
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIODisMarg Using NLP From line 219
 
@@ -6376,7 +6376,7 @@ San_Luis              .C          .           479.8323       539.5873          .
 San_Luis              .D          .          5638.2196      6329.6138          .          
 San_Luis              .E          .           118.1532       133.6210          .          
 San_Luis              .F          .           686.1290       771.1448          .          
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 14:22:49 Page 115
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 15:35:04 Page 115
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIODisMarg Using NLP From line 219
 
@@ -6434,7 +6434,7 @@ Santiago_del_Estero   .D          .          1206.3438      1355.0594          .
 Santiago_del_Estero   .E          .            75.1653        85.3692          .          
 Santiago_del_Estero   .F          .           381.2183       428.8981          .          
 Santiago_del_Estero   .G          .          1284.0294      1442.2575          .          
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 14:22:49 Page 116
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 15:35:04 Page 116
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIODisMarg Using NLP From line 219
 
@@ -6492,7 +6492,7 @@ Tierra_del_Fuego      .P          .            18.2358        21.4687          .
 Ciudad_de_Buenos_Aires.A          .              .              .            -3.6428      
 Ciudad_de_Buenos_Aires.B          .              .              .            -2.4023      
 Ciudad_de_Buenos_Aires.C          .              .              .            -7.2693      
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 14:22:49 Page 117
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 15:35:04 Page 117
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIODisMarg Using NLP From line 219
 
@@ -6550,7 +6550,7 @@ Cordoba               .A          .              .              .            -2.
 Cordoba               .B          .              .              .            -1.9643      
 Cordoba               .C          .              .              .            -5.3101      
 Cordoba               .D          .              .              .            -1.8336      
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 14:22:49 Page 118
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 15:35:04 Page 118
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIODisMarg Using NLP From line 219
 
@@ -6608,7 +6608,7 @@ Chubut                .B          .              .              .            -1.
 Chubut                .C          .              .              .            -2.7825      
 Chubut                .D          .              .              .            -1.7333      
 Chubut                .E          .              .              .            -2.0926      
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 14:22:49 Page 119
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 15:35:04 Page 119
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIODisMarg Using NLP From line 219
 
@@ -6666,7 +6666,7 @@ Jujuy                 .C          .              .              .            -2.
 Jujuy                 .D          .              .              .            -1.9976      
 Jujuy                 .E          .              .              .            -2.0556      
 Jujuy                 .F          .              .              .            -1.8282      
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 14:22:49 Page 120
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 15:35:04 Page 120
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIODisMarg Using NLP From line 219
 
@@ -6724,7 +6724,7 @@ Mendoza               .D          .              .              .            -2.
 Mendoza               .E          .              .              .            -2.5815      
 Mendoza               .F          .              .              .            -1.5978      
 Mendoza               .G          .              .              .            -1.5586      
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 14:22:49 Page 121
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 15:35:04 Page 121
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIODisMarg Using NLP From line 219
 
@@ -6782,7 +6782,7 @@ Rio_Negro             .E          .              .              .            -1.
 Rio_Negro             .F          .              .              .            -1.3760      
 Rio_Negro             .G          .              .              .            -1.3060      
 Rio_Negro             .H          .              .              .            -1.3039      
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 14:22:49 Page 122
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 15:35:04 Page 122
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIODisMarg Using NLP From line 219
 
@@ -6840,7 +6840,7 @@ San_Luis              .F          .              .              .            -1.
 San_Luis              .G          .              .              .            -1.3366      
 San_Luis              .H          .              .              .            -1.3500      
 San_Luis              .I          .              .              .            -1.3497      
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 14:22:49 Page 123
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 15:35:04 Page 123
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIODisMarg Using NLP From line 219
 
@@ -6898,7 +6898,7 @@ Santiago_del_Estero   .G          .              .              .            -1.
 Santiago_del_Estero   .H          .              .              .            -1.5645      
 Santiago_del_Estero   .I          .              .              .            -1.4477      
 Santiago_del_Estero   .J          .              .              .            -1.4611      
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 14:22:49 Page 124
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 15:35:04 Page 124
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIODisMarg Using NLP From line 219
 
@@ -6956,7 +6956,7 @@ Ciudad_de_Buenos_Aires.C          .              .              .             5.
 Ciudad_de_Buenos_Aires.D          .              .              .             0.1944      
 Ciudad_de_Buenos_Aires.E          .              .              .             0.4163      
 Ciudad_de_Buenos_Aires.F          .              .              .            -0.7384      
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 14:22:49 Page 125
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 15:35:04 Page 125
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIODisMarg Using NLP From line 219
 
@@ -7014,7 +7014,7 @@ Cordoba               .D          .              .              .            -0.
 Cordoba               .E          .              .              .            -0.4464      
 Cordoba               .F          .              .              .            -1.0652      
 Cordoba               .G          .              .              .            -0.8482      
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 14:22:49 Page 126
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 15:35:04 Page 126
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIODisMarg Using NLP From line 219
 
@@ -7072,7 +7072,7 @@ Chubut                .E          .              .              .            -0.
 Chubut                .F          .              .              .            -1.0813      
 Chubut                .G          .              .              .            -0.6261      
 Chubut                .H          .              .              .            -0.5951      
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 14:22:49 Page 127
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 15:35:04 Page 127
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIODisMarg Using NLP From line 219
 
@@ -7130,7 +7130,7 @@ Jujuy                 .F          .              .              .            -0.
 Jujuy                 .G          .              .              .            -0.2511      
 Jujuy                 .H          .              .              .            -0.2505      
 Jujuy                 .I          .              .              .            -0.2867      
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 14:22:49 Page 128
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 15:35:04 Page 128
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIODisMarg Using NLP From line 219
 
@@ -7188,7 +7188,7 @@ Mendoza               .G          .              .              .            -0.
 Mendoza               .H          .              .              .            -0.4590      
 Mendoza               .I          .              .              .            -0.5432      
 Mendoza               .J          .              .              .            -0.5255      
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 14:22:49 Page 129
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 15:35:04 Page 129
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIODisMarg Using NLP From line 219
 
@@ -7246,7 +7246,7 @@ Rio_Negro             .H          .              .              .            -0.
 Rio_Negro             .I          .              .              .            -0.7268      
 Rio_Negro             .J          .              .              .            -0.7231      
 Rio_Negro             .K          .              .              .            -0.7240      
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 14:22:49 Page 130
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 15:35:04 Page 130
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIODisMarg Using NLP From line 219
 
@@ -7304,7 +7304,7 @@ San_Luis              .I          .              .              .            -0.
 San_Luis              .J          .              .              .            -0.7421      
 San_Luis              .K          .              .              .            -0.7155      
 San_Luis              .L          .              .              .            -0.7181      
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 14:22:49 Page 131
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 15:35:04 Page 131
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIODisMarg Using NLP From line 219
 
@@ -7362,7 +7362,7 @@ Santiago_del_Estero   .J          .              .              .            -0.
 Santiago_del_Estero   .K          .              .              .            -0.5384      
 Santiago_del_Estero   .L          .              .              .            -0.5175      
 Santiago_del_Estero   .M          .              .              .            -0.5955      
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 14:22:49 Page 132
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 15:35:04 Page 132
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE LPIODisMarg Using NLP From line 219
 
@@ -7412,7 +7412,7 @@ Tierra_del_Fuego      .P          .              .              .            -0.
                              0 INFEASIBLE
                              0  UNBOUNDED
                              0     ERRORS
-GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 14:22:49 Page 133
+GAMS 25.0.3  r65947 Released Mar 21, 2018 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               02/27/20 15:35:04 Page 133
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 E x e c u t i o n
 
@@ -7453,7 +7453,7 @@ Tierra_del_Fuego             1.330       1.273       1.893       1.297       1.3
 
 
 
-EXECUTION TIME       =        1.031 SECONDS     36 MB  25.0.3 r65947 WEX-WEI
+EXECUTION TIME       =        0.750 SECONDS     36 MB  25.0.3 r65947 WEX-WEI
 
 
 USER: Elco Koks, Single User License                 S170331:0459AO-GEN

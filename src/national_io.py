@@ -231,8 +231,8 @@ def OECD(save_output=True,print_output=True):
   OECD = OECD.groupby(level=0,axis=1).sum()
   OECD.index = OECD.index.map(mapper_OECD)
   OECD = OECD.groupby(level=0,axis=0).sum()
-  OECD.loc['B',:] = 0
-  OECD['B'] = 0
+  OECD.loc['B',:] = 1e-6
+  OECD['B'] = 1e-6
 
   OECD = OECD[[chr(i).upper() for i in range(ord('a'),ord('p')+1)]+['FinalD','Exports']]
   OECD = OECD.T[[chr(i).upper() for i in range(ord('a'),ord('p')+1)]+['ValueA','Imports']]

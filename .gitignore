@@ -90,6 +90,16 @@ ENV/
 env.bak/
 venv.bak/
 
+# GAMS stuff
+*.lst
+*.gdx
+*_Argentina.gms
+
+#downscaling stuff
+proxy_*
+output1.csv
+output2.csv
+
 # Spyder project settings
 .spyderproject
 .spyproject
@@ -102,3 +112,4 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+

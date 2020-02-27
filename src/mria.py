@@ -30,7 +30,7 @@ class MRIA_IO(object):
     constraints and objectives for different model setups.
     """
 
-    def __init__(self, name, list_regions, list_sectors, list_fd_cats=[]):
+    def __init__(self, name, list_regions, list_sectors, table_source, list_fd_cats=[]):
         """
         Creation of a Concrete Model, specify the regions and sectors to include.
 
@@ -56,6 +56,7 @@ class MRIA_IO(object):
         self.total_regions = len(list_regions)
         self.sectors = list_sectors
         self.fd_cat = list_fd_cats
+        self.data_source = table_source
 
 
     def create_sets(self, FD_SET=[], VA_SET=[]):
@@ -520,7 +521,7 @@ class MRIA_IO(object):
         try:
             mria_path = os.path.join('..','mria_input')
             RatMarg = pd.read_csv(os.path.join(mria_path,
-                                               'Ratmarg_{}.csv'.format(self.name)), index_col=[0], header=0)
+                                               'Ratmarg_{}.csv'.format(self.data_source)), index_col=[0], header=0)
 
             if (set(list(RatMarg.index.values)) != set(list(self.regions))):
                 RatMarg = ratmarg_IO(Table)

@@ -333,7 +333,7 @@ def estimate(table='INDEC',year=2015,print_output=False,print_progress=True):
     if print_progress:
         print('NOTE : Balanced MRIO table with trade finished using {} data'.format(table))
 
-def prepare_table_mria(print_output=True):
+def prepare_table_mria(table='INDEC',year='2015',print_output=True):
     """
     Convert MRIO table to an excel file in which all elements of the table are disaggregated.
     """
@@ -346,7 +346,7 @@ def prepare_table_mria(print_output=True):
     Xnew = Xnew+1e-6
 
     # write to excel
-    writer = pd.ExcelWriter(os.path.join(data_path,'MRIO','mrio_argentina_disaggregated.xlsx'))
+    writer = pd.ExcelWriter(os.path.join(data_path,'MRIO', 'mrio_argentina_disaggregated_{}_{}.xlsx'.format(table,year)))
 
     # write T
     df_T = Xnew.iloc[:384, :384]
@@ -386,7 +386,7 @@ def prepare_table_mria(print_output=True):
     writer.save()
 
     if print_output:
-        print('NOTE : MRIO table ready to use for MRIA model')
+        print('NOTE : MRIO table ready to use for MRIA model using {} data'.format(table))
 
 if __name__ == "__main__":
 

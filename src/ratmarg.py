@@ -92,7 +92,7 @@ def load_db_IO(table_in):
     # And save to GDX file
     db.export(os.path.join(work_path, "{}.gdx".format(table_in.name)))
 
-def ratmarg_IO(table_in):
+def ratmarg_IO(table_in,table='INDEC'):
     """
     Estimate marginal values of the rationing variable in GAMS. GAMS is required, as the marginal values of a variable are not returned in the free python solvers.
 
@@ -157,6 +157,6 @@ def ratmarg_IO(table_in):
     Ratmarginal.columns = Ratmarginal.columns.droplevel()
 
     Ratmarginal.to_csv(os.path.join(work_path,
-                                    'Ratmarg_{}.csv'.format(table_in.name)))
+                                    'Ratmarg_{}.csv'.format(table)))
 
     return Ratmarginal
