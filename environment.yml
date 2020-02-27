@@ -1,0 +1,17 @@
+name: MRIA_ARG
+
+channels:
+        - conda-forge
+
+dependencies:
+        - python=3.6
+        - numpy
+        - pandas
+        - geopandas
+        - matplotlib
+        - pyomo
+        - pyomo.extras
+        - xlrd
+        - tqdm
+        - jupyter
+        - jupyterlab
