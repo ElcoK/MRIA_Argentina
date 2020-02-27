@@ -214,7 +214,7 @@ def OECD(save_output=True):
   """
 
   # load mapping function for industries
-  mapper_OECD = pd.read_excel(os.path.join(data_path,'mappers.xlsx'),
+  mapper_OECD = pd.read_excel(os.path.join(data_path,'other_sources','mappers.xlsx'),
                               sheet_name="OECD_INDEC")
   mapper_OECD = dict(zip(mapper_OECD['OECD'],mapper_OECD['INDEC'])) 
 
@@ -246,7 +246,7 @@ def EORA(save_output=True):
   """
 
   # load mapping function for industries
-  mapper_EORA = pd.read_excel(os.path.join(data_path,'mappers.xlsx'),
+  mapper_EORA = pd.read_excel(os.path.join(data_path,'other_sources','mappers.xlsx'),
                               sheet_name="EORA_INDEC")
   mapper_EORA = dict(zip(mapper_EORA['EORA'],mapper_EORA['INDEC']))
 
@@ -335,7 +335,7 @@ def GTAP(save_output=True):
   """
 
   # load mapping function for industries  
-  mapper_GTAP = pd.read_excel(os.path.join(data_path,'mappers.xlsx'),
+  mapper_GTAP = pd.read_excel(os.path.join(data_path,'other_sources','mappers.xlsx'),
                               sheet_name="GTAP_INDEC")
   mapper_GTAP = dict(zip(mapper_GTAP['GTAP'],mapper_GTAP['INDEC']))
 

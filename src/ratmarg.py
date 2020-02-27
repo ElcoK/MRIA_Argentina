@@ -7,8 +7,6 @@ from shutil import copyfile
 
 import pandas as pd
 from gams import GamsParameter, GamsWorkspace
-#from oia.utils import load_config
-
 
 def load_db_IO(table_in):
     """

@@ -27,7 +27,7 @@ def estimate(table='INDEC',print_output=False):
     data_path = os.path.join('..','data')
 
     # load sector data
-    sectors = list(pd.read_excel(os.path.join(data_path,
+    sectors = list(pd.read_excel(os.path.join(data_path,'other_sources',
                     'industry_high_level_classification.xlsx'))['SEC_CODE'].values)
 
     # load provincial mappers
