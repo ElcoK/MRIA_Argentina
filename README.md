@@ -1,3 +1,5 @@
+![IVM](http://ivm.vu.nl/en/Images/IVM_logo_rgb2_tcm234-851594.svg)
+
 # MRIA Argentina
 This repository holds the code to perform a multiregional impact assessment for Argentina.
 
@@ -16,7 +18,7 @@ conda env create -f .environment.yml
 
 ## How to run the model from a notebook
 
-Move to the project folder (**Argentina_MRIA**), activate the virtual environment and jupyter lab:
+Move to the project folder (**MRIA_Argentina**), activate the virtual environment and jupyter lab:
 
 ```bash
 (base) conda activate MRIA_ARG
