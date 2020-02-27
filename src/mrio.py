@@ -20,7 +20,7 @@ def est_trade_value(x,output_new,sector):
     return x
 
 
-def estimate(table='INDEC',print_output=False):
+def estimate(table='INDEC',year=2015,print_output=False,print_progress=True):
     """
     Function to create a province-level MRIO table, based on a national IO table. The default is the INDEC table.
     """
@@ -78,7 +78,6 @@ def estimate(table='INDEC',print_output=False):
             proxy_sector.to_csv(os.path.join('..','mrio_downscaling','proxy_{}.csv'.format(sector)),index=False)
 
     # proxy level 18
-
     def change_name(x):
         if x in sectors:
             return 'sec'+x
@@ -116,6 +115,11 @@ def estimate(table='INDEC',print_output=False):
     """
     Create first version of MRIO for Argentina, without trade
     """
+
+    ### save basetable for disaggregation usin the specific source:
+    basetable = pd.read_csv(os.path.join(data_path,'national_tables','{}_{}.csv'.format(year,table)),index_col=[0])
+    basetable.to_csv(os.path.join('..','mrio_downscaling','basetable.csv'),header=False,index=False)
+
 
     ### run libmrio
     p = subprocess.Popen([r'..\mrio_downscaling\mrio_disaggregate', 'settings_notrade.yml'],
@@ -184,13 +188,14 @@ def estimate(table='INDEC',print_output=False):
     output_new.index = index_mi
     output_new.columns = column_mi
 
+    if print_progress:
+        print('NOTE : Balanced MRIO table without trade finished using {} data'.format(table))
 
     """
     Create second version of MRIO for Argentina, with trade
     """
 
     ### Load OD matrix
-
     od_matrix_total = pd.DataFrame(pd.read_excel(os.path.join(data_path,'OD_data','province_ods.xlsx'),
                             sheet_name='total',index_col=[0,1],usecols =[0,1,2,3,4,5,6,7])).unstack(1).fillna(0)
     od_matrix_total.columns.set_levels(['A','G','C','D','B','I'],level=0,inplace=True)
@@ -205,7 +210,7 @@ def estimate(table='INDEC',print_output=False):
     mi_index = pd.MultiIndex.from_product([sectors+['other1','other2'], region_names, region_names],
                                         names=['sec1', 'reg1','reg2'])
 
-    for iter_,sector in enumerate(tqdm(sectors+['other1','other2'])):
+    for iter_,sector in enumerate((sectors+['other1','other2'])):
         if sector in ['A','G','C','D','B','I']:
             proxy_trade = (od_matrix_total.sum(level=1).divide(od_matrix_total.sum(level=1).sum(axis=1),axis='rows')).stack(0).reset_index()
             proxy_trade.columns = ['reg1','reg2','gdp']
@@ -240,7 +245,7 @@ def estimate(table='INDEC',print_output=False):
     # proxy level 18
     mi_index = pd.MultiIndex.from_product([sectors+['other1','other2'], region_names, sectors+['other1','other2'], region_names],
                                         names=['sec1', 'reg1','sec2','reg2'])
-    for iter_,sector in enumerate(tqdm(sectors+['other1','other2'])):
+    for iter_,sector in enumerate((sectors+['other1','other2'])):
         if (sector is not 'other1') & (sector is not 'other2'):
             proxy_trade = pd.DataFrame(columns=['year','gdp'],index= mi_index).reset_index()
             proxy_trade['year'] = 2016
@@ -325,8 +330,10 @@ def estimate(table='INDEC',print_output=False):
 
     mrio_argentina.to_csv(os.path.join(data_path,'MRIO','mrio_argentina.csv'))
 
+    if print_progress:
+        print('NOTE : Balanced MRIO table with trade finished using {} data'.format(table))
 
-def prepare_table_mria():
+def prepare_table_mria(print_output=True):
     """
     Convert MRIO table to an excel file in which all elements of the table are disaggregated.
     """
@@ -378,6 +385,8 @@ def prepare_table_mria():
     # save excel
     writer.save()
 
+    if print_output:
+        print('NOTE : MRIO table ready to use for MRIA model')
 
 if __name__ == "__main__":
 

@@ -11,7 +11,7 @@ data_path = os.path.join('C:\\','Projects','MRIA_Argentina','data')
 import warnings
 warnings.filterwarnings('ignore')
 
-def INDEC(set_year=2015,save_output=True):
+def INDEC(set_year=2015,save_output=True,print_output=True):
   
   """
   Function to create a national Input-Output table using INDEC data as the baseline 
@@ -205,10 +205,13 @@ def INDEC(set_year=2015,save_output=True):
 
   if save_output:
     INDEC.to_csv(os.path.join(data_path,'national_tables','{}_INDEC.csv'.format(set_year)))
+
+  if print_output:
+    print('NOTE : Standardized national table for Argentina for the year {} finished using INDEC data'.format(year))
   
   return INDEC
 
-def OECD(save_output=True):
+def OECD(save_output=True,print_output=True):
   """
   Function to create a national IO-table using OECD data 
   """
@@ -237,10 +240,13 @@ def OECD(save_output=True):
 
   if save_output:
     OECD.to_csv(os.path.join(data_path,'national_tables','2015_OECD.csv'))
-  
+
+  if print_output:
+    print('NOTE : Standardized national table for Argentina finished using OECD data')
+
   return OECD
 
-def EORA(save_output=True):
+def EORA(save_output=True,print_output=True):
   """
   Function to create a national IO-table using EORA data as the baseline 
   """
@@ -326,10 +332,13 @@ def EORA(save_output=True):
   
   if save_output:
     EORA.to_csv(os.path.join(data_path,'national_tables','2015_EORA.csv'))
-  
+
+  if print_output:
+    print('NOTE : Standardized national table for Argentina finished using EORA data')  
+
   return EORA
 
-def GTAP(save_output=True):
+def GTAP(save_output=True,print_output=True):
   """
   Function to create a national IO-table using GTAP data as the baseline 
   """
@@ -397,6 +406,9 @@ def GTAP(save_output=True):
 
   if save_output:
     GTAP.to_csv(os.path.join(data_path,'national_tables','2015_GTAP.csv'))
+
+  if print_output:
+    print('NOTE : Standardized national table for Argentina finished using GTAP data')
 
   return GTAP
 
