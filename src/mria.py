@@ -264,9 +264,6 @@ class MRIA_IO(object):
         if self.fd.active is not True:
             self.create_FD(FinalD, disr_dict)
 
-        if self.ExpROW.active is not True:
-            self.create_ExpImp(Z_matrix)
-
         def x_init_base(model, R, S):
             return(sum(Z_matrix[R, S, Rb, Sb] for Rb in model.Rb for Sb in
                        model.Sb) + self.fd[R, S] + self.ExpROW[R, S])

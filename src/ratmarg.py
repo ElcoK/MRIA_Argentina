@@ -6,7 +6,7 @@ import os
 from shutil import copyfile
 
 import pandas as pd
-from gams import GamsParameter, GamsWorkspace
+from gams import *
 
 def load_db_IO(table_in):
     """
