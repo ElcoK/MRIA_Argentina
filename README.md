@@ -35,5 +35,11 @@ Move to the project folder (**MRIA_Argentina**), activate the virtual environmen
 
 **GTAP** : 
 
+## Background papers
+
+```
+Koks, E. E., & Thissen, M. (2016). A multiregional impact assessment model for disaster analysis.  Economic Systems Research, 28(4), 429-449.
+```
+
 ## License
 Copyright (C) 2020 Elco Koks. All versions released under the [MIT license](LICENSE.md).

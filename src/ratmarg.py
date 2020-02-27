@@ -19,11 +19,11 @@ def load_db_IO(table_in):
         - .gdx file of the IO data
     """
 
-    data_path = 'D:\\Dropbox\\OIA\\Argentina\\Data' #load_config()['paths']['data']
+    work_path = os.path.join('..', 'mria_input')
 
     """CREATE GAMS WORKSPACE"""
 
-    ws = GamsWorkspace(os.path.join(data_path, 'gams_runs'))
+    ws = GamsWorkspace(work_path)
 
     """ CREATE INPUT FILES GAMS GDX """
 
@@ -90,7 +90,7 @@ def load_db_IO(table_in):
         val.add_record(k).value = v
 
     # And save to GDX file
-    db.export(os.path.join(data_path, "gams_runs", "{}.gdx".format(table_in.name)))
+    db.export(os.path.join(work_path, "{}.gdx".format(table_in.name)))
 
 def ratmarg_IO(table_in):
     """
@@ -104,7 +104,7 @@ def ratmarg_IO(table_in):
 
     """
 
-    data_path = 'D:\\Dropbox\\OIA\\Argentina\\Data' #load_config()['paths']['data']
+    work_path = os.path.join('..', 'mria_input')
 
     table_in.prep_data()
 
@@ -113,12 +113,11 @@ def ratmarg_IO(table_in):
     """
     RUN SCRIPT WITH DISRUPTION
     """
-    setdir = os.path.join(data_path, 'gams_runs')
-    ws = GamsWorkspace(setdir)
+    ws = GamsWorkspace(work_path)
     ws.get_working_directory()
 
-    gamsfile_in = os.path.join(data_path, "gams_runs", "obtain_marg_value.gms")
-    gamsfile = os.path.join(data_path, "gams_runs",
+    gamsfile_in = os.path.join(work_path, "obtain_marg_value.gms")
+    gamsfile = os.path.join(work_path,
                             "obtain_marg_value_{}.gms".format(table_in.name))
     copyfile(gamsfile_in, gamsfile)
     str_ctry = ','.join(table_in.regions)
@@ -141,7 +140,7 @@ def ratmarg_IO(table_in):
     with open(gamsfile, 'w') as file:
         file.writelines(data)
 
-    gamsfile_run = gamsfile.replace("..\\..\\gams_runs\\", "")
+    gamsfile_run = gamsfile.replace("..\\mria_input\\", "")
     print(gamsfile_run)
     t1 = ws.add_job_from_file(gamsfile_run)
 
@@ -157,7 +156,7 @@ def ratmarg_IO(table_in):
     Ratmarginal = pd.DataFrame(Ratmarg, index=index_).unstack()
     Ratmarginal.columns = Ratmarginal.columns.droplevel()
 
-    Ratmarginal.to_csv(os.path.join(data_path, 'input_data',
+    Ratmarginal.to_csv(os.path.join(work_path,
                                     'Ratmarg_{}.csv'.format(table_in.name)))
 
     return Ratmarginal

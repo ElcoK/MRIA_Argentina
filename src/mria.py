@@ -20,7 +20,6 @@ from pyomo.environ import (ConcreteModel, Constraint, Objective, Param, Set,
                            SetOf, Var, minimize)
 from pyomo.opt import SolverFactory
 from ratmarg import ratmarg_IO
-#from oia.utils import load_config
 
 
 class MRIA_IO(object):
@@ -519,8 +518,8 @@ class MRIA_IO(object):
         model = self.m
 
         try:
-            data_path = 'C:\\Dropbox\\OIA\\Argentina\\Data' #load_config()['paths']['data']
-            RatMarg = pd.read_csv(os.path.join(data_path, 'input_data',
+            mria_path = os.path.join('..','mria_input')
+            RatMarg = pd.read_csv(os.path.join(mria_path,
                                                'Ratmarg_{}.csv'.format(self.name)), index_col=[0], header=0)
 
             if (set(list(RatMarg.index.values)) != set(list(self.regions))):
