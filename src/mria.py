@@ -521,9 +521,9 @@ class MRIA_IO(object):
                                                'Ratmarg_{}.csv'.format(self.data_source)), index_col=[0], header=0)
 
             if (set(list(RatMarg.index.values)) != set(list(self.regions))):
-                RatMarg = ratmarg_IO(Table)
+                RatMarg = ratmarg_IO(Table,self.data_source)
         except:
-            RatMarg = ratmarg_IO(Table)
+            RatMarg = ratmarg_IO(Table,self.data_source)
 
         Ratmarginal = {(r, k): v for r, kv in RatMarg.iterrows()
                        for k, v in kv.to_dict().items()}

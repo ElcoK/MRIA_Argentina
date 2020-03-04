@@ -227,9 +227,6 @@ RMINLP=CONOPT4
 RMIP=CONOPT4
 RMIQCP=CONOPT4
 
-[RP:OBTAIN_MARG_VALUE_ARGENTINA]
-1=
-
 [GDXDISP: Dmatrix Par 4]
 PlaneDim=0
 RowDim=4
@@ -371,6 +368,9 @@ Order=1
 Decim=7
 PlaneRownr=-1
 
+[RP:OBTAIN_MARG_VALUE_ARGENTINA]
+1=
+
 [MRUFILES]
 1=D:\new_io\EU_agg_v2.gdx
 2=D:\Dropbox\VU_DATA\IO_ANALYSIS\MRIA_GERMANY_EXP.gms
@@ -380,11 +380,11 @@ PlaneRownr=-1
 6=C:\Dropbox\OIA\Argentina\Data\gams_runs\output_Arg2.gdx
 7=C:\Dropbox\OIA\Argentina\Data\gams_runs\output_Arg1.gdx
 8=C:\Dropbox\OIA\Vietnam\Data\gams_runs\Vietnam.gdx
-9=C:\Dropbox\Oxford\MRIA\gams_runs\EORA_VNM.gdx
 
 [OPENWINDOW_1]
-FILE0=C:\Dropbox\NEW_IO\NEW_IO_CALC\wiod_2013.gms
-FILE1=C:\Dropbox\NEW_IO\NEW_IO_CALC\wiod_2013.gms
+FILE0=C:\Projects\MRIA_Argentina\mria_input\obtain_marg_value_Argentina.gms
+FILE1=C:\Projects\MRIA_Argentina\mria_input\obtain_marg_value_Argentina.lst
+FILE2=C:\Projects\MRIA_Argentina\mria_input\obtain_marg_value_Argentina.lst
 MAXIM=0
 TOP=60
 LEFT=56

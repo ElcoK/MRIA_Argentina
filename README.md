@@ -24,16 +24,19 @@ Move to the project folder (**MRIA_Argentina**), activate the virtual environmen
 (base) conda activate MRIA_ARG
 (MRIA_ARG) jupyter lab
 ```
+## GAMS dependency for the MRIA model
+When using the model with one of the predefined data sources, a GAMS dependency is not necessary. When using 
+new data, a new file with marginal values of rationing is required. This can (for now) only be done through GAMS. 
 
 ## Source data:
 
-**INDEC** : 
+**INDEC** : https://www.indec.gob.ar --> Cuadros de oferta y utilización (COU)
 
-**OECD** : 
+**OECD** : http://www.oecd.org/sti/ind/input-outputtables.htm 
 
-**EORA** :
+**EORA** : https://worldmrio.com/countrywise/ 
 
-**GTAP** : 
+**GTAP** : https://www.gtap.agecon.purdue.edu/ 
 
 ## Background papers
 
