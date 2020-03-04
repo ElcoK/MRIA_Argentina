@@ -26,7 +26,7 @@ Move to the project folder (**MRIA_Argentina**), activate the virtual environmen
 ```
 ## GAMS dependency for the MRIA model
 When using the model with one of the predefined data sources, a GAMS dependency is not necessary. When using 
-new data, a new file with marginal values of rationing is required. This can (for now) only be done through GAMS. 
+new data, a new file with marginal values of rationing is required. This can (for now) only be done through a licensed GAMS version. 
 
 ## Source data:
 

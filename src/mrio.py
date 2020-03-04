@@ -245,6 +245,7 @@ def estimate(table='INDEC',year=2015,print_output=False,print_progress=True):
     # proxy level 18
     mi_index = pd.MultiIndex.from_product([sectors+['other1','other2'], region_names, sectors+['other1','other2'], region_names],
                                         names=['sec1', 'reg1','sec2','reg2'])
+
     for iter_,sector in enumerate((sectors+['other1','other2'])):
         if (sector is not 'other1') & (sector is not 'other2'):
             proxy_trade = pd.DataFrame(columns=['year','gdp'],index= mi_index).reset_index()
@@ -390,5 +391,5 @@ def prepare_table_mria(table='INDEC',year='2015',print_output=True):
 
 if __name__ == "__main__":
 
-    estimate()
-    prepare_table_mria()
+    estimate(table='GTAP',year='2014',print_output=True)
+    prepare_table_mria(table='GTAP',year='2014',print_output=True)

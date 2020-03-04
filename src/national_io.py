@@ -246,7 +246,7 @@ def OECD(save_output=True,print_output=True):
 
   return OECD
 
-def EORA(save_output=True,print_output=True):
+def EORA(set_year=2015,save_output=True,print_output=True):
   """
   Function to create a national IO-table using EORA data as the baseline 
   """
@@ -338,7 +338,7 @@ def EORA(save_output=True,print_output=True):
 
   return EORA
 
-def GTAP(save_output=True,print_output=True):
+def GTAP(set_year=2014,save_output=True,print_output=True):
   """
   Function to create a national IO-table using GTAP data as the baseline 
   """
@@ -403,9 +403,26 @@ def GTAP(save_output=True,print_output=True):
   GTAP = GTAP[[chr(i).upper() for i in range(ord('a'),ord('p')+1)]+['FinalD','Exports']]
   GTAP = GTAP.T[[chr(i).upper() for i in range(ord('a'),ord('p')+1)]+['ValueA','Imports']]
   GTAP = GTAP.T*8
+ 
+  # and balance the table
+  X0 = GTAP.values[:,:]
+
+  # get sum of T
+  # u = np.array(list(EORA.sum(axis=1)[:16])+[EORA.loc['ValueA'].sum(),
+  #                 EORA.loc['Imports'].sum()])
+  # v = np.array(list(EORA.sum(axis=1)[:16])+[EORA['FinalD'].sum(),EORA['Exports'].sum()])
+
+  # and only keep T
+
+  # apply RAS method to rebalance the table
+  #new_IO = ras_method(X0,np.array(list(X0.sum(axis=0)[:16])+list(X0.sum(axis=1)[16:])),X0.sum(axis=0),1e-6,print_out=False)
+  new_IO = ras_method(X0,X0.sum(axis=1),X0.sum(axis=1),1e-5,print_out=False)
+
+  GTAP.iloc[:,:] = new_IO
+
 
   if save_output:
-    GTAP.to_csv(os.path.join(data_path,'national_tables','2015_GTAP.csv'))
+    GTAP.to_csv(os.path.join(data_path,'national_tables','{}_GTAP.csv'.format(set_year)))
 
   if print_output:
     print('NOTE : Standardized national table for Argentina finished using GTAP data')
@@ -414,7 +431,7 @@ def GTAP(save_output=True,print_output=True):
 
 if __name__ == "__main__":
 
-  print('INDEC 2015 ARS: {}'.format(INDEC().sum().sum()))
-  print('OECD 2015 ARS: {}'.format(OECD().sum().sum()))
-  print('EORA 2015 ARS: {}'.format(EORA().sum().sum()))
+  #print('INDEC 2015 ARS: {}'.format(INDEC().sum().sum()))
+  #print('OECD 2015 ARS: {}'.format(OECD().sum().sum()))
+  #print('EORA 2015 ARS: {}'.format(EORA().sum().sum()))
   print('GTAP 2014 ARS: {}'.format(GTAP().sum().sum()))
