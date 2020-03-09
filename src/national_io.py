@@ -11,7 +11,29 @@ data_path = os.path.join('C:\\','Projects','MRIA_Argentina','data')
 import warnings
 warnings.filterwarnings('ignore')
 
-def INDEC(set_year=2015,save_output=True,print_output=True):
+def dollar_pesos():
+  """
+  Dictionary of dollar to pesos conversion values per year
+  """
+  return    { 2004	:  2.9462,
+              2005	:  2.9312,
+              2006	:  3.0784,
+              2007	:  3.1196,
+              2008	:  3.1797,
+              2009	:  3.7478,
+              2010	:  3.9226,
+              2011	:  4.1101,
+              2012	:  4.8315,
+              2013	:  6.0655,
+              2014	:  8.7002,
+              2015	:  10.0118,
+              2016	:  14.7582,
+              2017	:  16.5627,
+              2018  :  28.095
+    }											
+
+
+def INDEC(set_year=2016,save_output=True,print_output=True):
   
   """
   Function to create a national Input-Output table using INDEC data as the baseline 
@@ -211,7 +233,7 @@ def INDEC(set_year=2015,save_output=True,print_output=True):
   
   return INDEC
 
-def OECD(save_output=True,print_output=True):
+def OECD(set_year=2016,save_output=True,print_output=True,in_dollars=False):
   """
   Function to create a national IO-table using OECD data 
   """
@@ -236,17 +258,37 @@ def OECD(save_output=True,print_output=True):
 
   OECD = OECD[[chr(i).upper() for i in range(ord('a'),ord('p')+1)]+['FinalD','Exports']]
   OECD = OECD.T[[chr(i).upper() for i in range(ord('a'),ord('p')+1)]+['ValueA','Imports']]
-  OECD = OECD.T*10
+
+  if in_dollars:
+    OECD = OECD.T
+  else:
+    OECD = OECD.T*dollar_pesos()[2015]
+
+  # convert to the desired year using INDEC time series
+  Total_Prod = pd.read_excel(os.path.join(data_path,
+                            'INDEC','sh_VBP_VAB_06_19.xls'),
+                            sheet_name='Cuadro 2',skiprows=3,index_col=[0])/1e3  
+
+  rel_change = Total_Prod[set_year]/Total_Prod[2015]  
+
+  # and balance the table
+  X0 = OECD.values[:,:]
+  X0_sum = np.array(list(OECD.sum(axis=1)[:16]*rel_change)+[(OECD['FinalD'][:16]*rel_change).sum()]+[(OECD['Exports'][:16]*rel_change).sum()])
+
+  # apply RAS method to rebalance the table
+  new_IO = ras_method(X0,X0_sum,X0_sum,1e-5,print_out=False)
+
+  OECD.iloc[:,:] = new_IO
 
   if save_output:
-    OECD.to_csv(os.path.join(data_path,'national_tables','2015_OECD.csv'))
+    OECD.to_csv(os.path.join(data_path,'national_tables','{}_OECD.csv'.format(set_year)))
 
   if print_output:
-    print('NOTE : Standardized national table for Argentina finished using OECD data')
+    print('NOTE : Standardized national table for Argentina for the year {} finished using OECD data'.format(set_year))
 
   return OECD
 
-def EORA(set_year=2015,save_output=True,print_output=True):
+def EORA(set_year=2016,save_output=True,print_output=True,in_dollars=False):
   """
   Function to create a national IO-table using EORA data as the baseline 
   """
@@ -315,30 +357,34 @@ def EORA(set_year=2015,save_output=True,print_output=True):
   EORA = EORA.T[[chr(i).upper() for i in range(ord('a'),ord('p')+1)]+['ValueA','Imports']]
   EORA = EORA.T
 
+  # convert to the desired year using INDEC time series
+  Total_Prod = pd.read_excel(os.path.join(data_path,
+                            'INDEC','sh_VBP_VAB_06_19.xls'),
+                            sheet_name='Cuadro 2',skiprows=3,index_col=[0])/1e3  
+
+  rel_change = Total_Prod[set_year]/Total_Prod[2015]  
+
   # and balance the table
   X0 = EORA.values[:,:]
-
-  # get sum of T
-  # u = np.array(list(EORA.sum(axis=1)[:16])+[EORA.loc['ValueA'].sum(),
-  #                 EORA.loc['Imports'].sum()])
-  # v = np.array(list(EORA.sum(axis=1)[:16])+[EORA['FinalD'].sum(),EORA['Exports'].sum()])
-
-  # and only keep T
+  X0_sum = np.array(list(EORA.sum(axis=1)[:16]*rel_change)+[(EORA['FinalD'][:16]*rel_change).sum()]+[(EORA['Exports'][:16]*rel_change).sum()])
 
   # apply RAS method to rebalance the table
-  new_IO = ras_method(X0,X0.sum(axis=1),X0.sum(axis=1),1e-5,print_out=False)
+  new_IO = ras_method(X0,X0_sum,X0_sum,1e-5,print_out=False)
 
-  EORA.iloc[:,:] = new_IO/1e6*10
-  
+  if in_dollars:
+    EORA.iloc[:,:] = new_IO/1e6
+  else:
+    EORA.iloc[:,:] = new_IO/1e6*dollar_pesos()[set_year]
+
   if save_output:
-    EORA.to_csv(os.path.join(data_path,'national_tables','2015_EORA.csv'))
+    EORA.to_csv(os.path.join(data_path,'national_tables','{}_EORA.csv'.format(set_year)))
 
   if print_output:
-    print('NOTE : Standardized national table for Argentina finished using EORA data')  
+    print('NOTE : Standardized national table for Argentina for the year {} finished using EORA data'.format(set_year))  
 
   return EORA
 
-def GTAP(set_year=2014,save_output=True,print_output=True):
+def GTAP(set_year=2016,save_output=True,print_output=True,in_dollars=False):
   """
   Function to create a national IO-table using GTAP data as the baseline 
   """
@@ -402,36 +448,41 @@ def GTAP(set_year=2014,save_output=True,print_output=True):
 
   GTAP = GTAP[[chr(i).upper() for i in range(ord('a'),ord('p')+1)]+['FinalD','Exports']]
   GTAP = GTAP.T[[chr(i).upper() for i in range(ord('a'),ord('p')+1)]+['ValueA','Imports']]
-  GTAP = GTAP.T*8
+
+  if in_dollars:
+    GTAP = GTAP.T
+  else:
+    GTAP = GTAP.T*dollar_pesos()[2014]
  
+
+  # convert to the desired year using INDEC time series
+  Total_Prod = pd.read_excel(os.path.join(data_path,
+                            'INDEC','sh_VBP_VAB_06_19.xls'),
+                            sheet_name='Cuadro 2',skiprows=3,index_col=[0])/1e3  
+
+  rel_change = Total_Prod[set_year]/Total_Prod[2014]
+
+
   # and balance the table
   X0 = GTAP.values[:,:]
-
-  # get sum of T
-  # u = np.array(list(EORA.sum(axis=1)[:16])+[EORA.loc['ValueA'].sum(),
-  #                 EORA.loc['Imports'].sum()])
-  # v = np.array(list(EORA.sum(axis=1)[:16])+[EORA['FinalD'].sum(),EORA['Exports'].sum()])
-
-  # and only keep T
+  X0_sum = np.array(list(GTAP.sum(axis=1)[:16]*rel_change)+[(GTAP['FinalD'][:16]*rel_change).sum()]+[(GTAP['Exports'][:16]*rel_change).sum()])
 
   # apply RAS method to rebalance the table
-  #new_IO = ras_method(X0,np.array(list(X0.sum(axis=0)[:16])+list(X0.sum(axis=1)[16:])),X0.sum(axis=0),1e-6,print_out=False)
-  new_IO = ras_method(X0,X0.sum(axis=1),X0.sum(axis=1),1e-5,print_out=False)
+  new_IO = ras_method(X0,X0_sum,X0_sum,1e-5,print_out=True)
 
   GTAP.iloc[:,:] = new_IO
-
 
   if save_output:
     GTAP.to_csv(os.path.join(data_path,'national_tables','{}_GTAP.csv'.format(set_year)))
 
   if print_output:
-    print('NOTE : Standardized national table for Argentina finished using GTAP data')
+    print('NOTE : Standardized national table for Argentina for the year {} finished using GTAP data'.format(set_year))
 
   return GTAP
 
 if __name__ == "__main__":
 
-  #print('INDEC 2015 ARS: {}'.format(INDEC().sum().sum()))
-  #print('OECD 2015 ARS: {}'.format(OECD().sum().sum()))
-  #print('EORA 2015 ARS: {}'.format(EORA().sum().sum()))
-  print('GTAP 2014 ARS: {}'.format(GTAP().sum().sum()))
+  print('INDEC 2016 ARS: {}'.format(INDEC().sum().sum()))
+  print('OECD 2016 ARS: {}'.format(OECD().sum().sum()))
+  print('EORA 2016 ARS: {}'.format(EORA().sum().sum()))
+  print('GTAP 2016 ARS: {}'.format(GTAP().sum().sum()))

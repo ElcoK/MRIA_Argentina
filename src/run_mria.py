@@ -9,7 +9,13 @@ from mrio import estimate,prepare_table_mria
 from mria import MRIA_IO as MRIA
 from table import io_basic
 
-def run(data_source='INDEC',set_year=2015,solver='IPOPT'):
+def run(data_source='INDEC',
+        set_year=2015,solver='IPOPT',   
+        disr_dict_fd = {},
+        disr_dict_sup = {},
+        print_output=False,
+        loss_in_va=True,
+        ):
 
     # set data paths
     data_path = os.path.join('..','data')
@@ -61,8 +67,8 @@ def run(data_source='INDEC',set_year=2015,solver='IPOPT'):
 
     output_in = pd.DataFrame()
 
-    disr_dict_fd = {}
-    disr_dict_sup = {}
+    disr_dict_fd_base = {}
+    disr_dict_sup_base = {}
 
     """Create model"""
     MRIA_RUN = MRIA(DATA.name, DATA.regions, DATA.sectors, data_source, list_fd_cats=['FD'])
@@ -75,8 +81,8 @@ def run(data_source='INDEC',set_year=2015,solver='IPOPT'):
     MRIA_RUN.create_alias()
 
     """ Define tables and parameters"""
-    MRIA_RUN.baseline_data(DATA, disr_dict_sup, disr_dict_fd)
-    MRIA_RUN.impact_data(DATA, disr_dict_sup, disr_dict_fd)
+    MRIA_RUN.baseline_data(DATA, disr_dict_sup_base, disr_dict_fd_base)
+    MRIA_RUN.impact_data(DATA, disr_dict_sup_base, disr_dict_fd_base)
 
     status = MRIA_RUN.run_impactmodel(solver=solver)
 
@@ -86,7 +92,6 @@ def run(data_source='INDEC',set_year=2015,solver='IPOPT'):
 
 
     ###Run impact model
-    disr_dict_fd = {}
     collect_outputs = {}
 
     total_losses = {}
@@ -96,24 +101,7 @@ def run(data_source='INDEC',set_year=2015,solver='IPOPT'):
     output = output_in.copy()
 
     """Run model and create some output"""
-    disr_dict_fd = {}
-    disr_dict_sup = {
-        ('Buenos_Aires', 'A'): 1-0.13,
-        ('Catamarca', 'A'): 1+0.31,
-        ('Cordoba', 'A'): 1-0.23,
-        ('Corrientes', 'A'): 1-0.11,
-        ('Chaco', 'A'): 1-0.13,
-        ('Entre_Rios', 'A'): 1-0.38,
-        ('Formosa', 'A'): 1-0.65,
-        ('Jujuy', 'A'): 1+0.02,
-        ('La_Pampa', 'A'): 1-0.07,
-        ('Misiones', 'A'): 1-0.11,
-        ('Salta', 'A'): 1,
-        ('San_Luis', 'A'): 1-0.35,
-        ('Santa_Fe', 'A'): 1-0.17,
-        ('Santiago_del_Estero', 'A'): 1-0.13,
-        ('Tucuman', 'A'): 1+0.19}
-
+    
 
     """Create model"""
     MRIA_RUN = MRIA(DATA.name, DATA.regions, DATA.sectors, data_source, list_fd_cats=['FD'])
@@ -138,7 +126,12 @@ def run(data_source='INDEC',set_year=2015,solver='IPOPT'):
 
     output['dir_losses'] = (disrupt['shock']*output['x_in']).fillna(0)*-1
 
-    status = MRIA_RUN.run_impactmodel(output='print',solver=solver,tol=1e-6, DisWeight=1.75, RatWeight=2.0)
+    if print_output:
+        output_print = 'print'
+    else:
+        output_print = None
+
+    status = MRIA_RUN.run_impactmodel(output=output_print,solver=solver,tol=1e-6, DisWeight=1.75, RatWeight=2.0)
     print(status)
 
     output['x_out'] = pd.Series(MRIA_RUN.X.get_values())
@@ -155,6 +148,7 @@ def run(data_source='INDEC',set_year=2015,solver='IPOPT'):
 
     print('{} results in {} billion pesos losses for {}'.format(event,total_losses_sum,solver))
 
+    return output
 
 if __name__ == "__main__":
-    run('GTAP',2014)
+    run('INDEC',2015)
