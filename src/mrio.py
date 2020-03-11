@@ -329,7 +329,7 @@ def estimate(table='INDEC',year=2015,print_output=False,print_progress=True):
 
     mrio_argentina = pd.DataFrame(mrio_arg.T,index=output.index,columns=output.columns)
 
-    mrio_argentina.to_csv(os.path.join(data_path,'MRIO','mrio_argentina.csv'))
+    mrio_argentina.to_csv(os.path.join(data_path,'MRIO','MRIO_Argentina_{}_{}.csv'.format(table,year)))
 
     if print_progress:
         print('NOTE : Balanced MRIO table with trade finished using {} data'.format(table))
@@ -341,7 +341,7 @@ def prepare_table_mria(table='INDEC',year='2015',print_output=True):
     data_path = os.path.join('..','data')
 
     # load table
-    MRIO = pd.read_csv(os.path.join(data_path,'MRIO','mrio_argentina.csv'),index_col=[0,1],header=[0,1])
+    MRIO = pd.read_csv(os.path.join(data_path,'MRIO','MRIO_Argentina_{}_{}.csv'.format(table,year)),index_col=[0,1],header=[0,1])
 
     Xnew = MRIO.copy()
     Xnew = Xnew+1e-6
